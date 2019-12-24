@@ -13,7 +13,7 @@ function UserPage() {
       .then(res => {
         //setData is not working
         setUserData(res.data);
-        console.log(res.data);
+        console.log(userData);
       })
       .catch(err => {
         console.log(err);
