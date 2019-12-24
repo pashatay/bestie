@@ -4,6 +4,7 @@ import axios from "axios";
 
 function UserPage() {
   const [userData, setUserData] = useState([]);
+  console.log(userData);
   const headers = {
     Authorization: localStorage.getItem("access_token")
   };
