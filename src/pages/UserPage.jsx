@@ -1,19 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../Context";
 import axios from "axios";
 
 function UserPage() {
-  const token = {
-    headers: {
-      Authorization:
-        "beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc2hhQGdtYWlsLmNvbSIsImlkIjoyMSwiaWF0IjoxNTc3MTMyMjAwLCJleHAiOjE1NzcxMzU4MDB9.5OBZUr41EW8g2DsuUdAWZLb5zgLK7PGrZWVNY2JBPSE"
-    }
+  const [userData, setUserData] = useState([]);
+  const headers = {
+    Authorization: localStorage.getItem("access_token")
   };
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/mainpage", { headers })
+      .then(res => {
+        //setData is not working
+        setUserData(res.data);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
-  //   useEffect(
-  //     axios.get("http://localhost:8000/21", token).then(res => {
-  //       console.log(res);
-  //     }, [])
-  //   );
   return (
     <div>
       <h1>User page</h1>

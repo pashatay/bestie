@@ -11,13 +11,14 @@ function ContextProvider(props) {
   };
   const [formValues, setFormValues] = useState(formDefaultValues);
 
+  //will get rid of it eventualy
   const loggedUserDefaultValues = {
     id: "",
     token: ""
   };
   const [loggedUserValues, setLoggedUserValues] = useState(
     loggedUserDefaultValues
-  );
+  ); //
 
   const [confirmedPassword, setConfirmedPassword] = useState("");
 
@@ -66,8 +67,9 @@ function ContextProvider(props) {
   };
 
   const userLoggedIn = data => {
-    console.log(props);
-    setLoggedUserValues({ id: data.id, token: data.token });
+    //will get rid of setLoggedUserValues
+    setLoggedUserValues({ id: data.id, token: `bearer ${data.token}` });
+    localStorage.setItem("access_token", `bearer ${data.token}`);
   };
 
   return (

@@ -22,7 +22,7 @@ function App() {
         </Route>
         <Route path="/login">
           {loggedUserValues.token.length > 1 ? (
-            <Redirect to="{`/${loggedUserValues.id}`}" />
+            <Redirect to="mainpage" />
           ) : (
             false
           )}
@@ -31,7 +31,7 @@ function App() {
         <Route path="/signup">
           <Signup />
         </Route>
-        <Route path="/:userid">
+        <Route path="/mainpage">
           <UserPage />
         </Route>
       </Switch>
