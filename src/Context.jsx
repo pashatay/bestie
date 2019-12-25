@@ -23,6 +23,11 @@ function ContextProvider(props) {
   const [confirmedPassword, setConfirmedPassword] = useState("");
 
   const [anError, setAnError] = useState("");
+  const [userData, setUserData] = useState([]);
+
+  const headers = {
+    Authorization: localStorage.getItem("access_token")
+  };
 
   const handleChange = e => {
     const target = e.target;
@@ -60,6 +65,9 @@ function ContextProvider(props) {
         console.log(res.data);
         userLoggedIn(res.data);
       })
+      .then(() => {
+        getDataForUserMainPage();
+      })
       .catch(err => {
         console.log(err);
         setAnError("Something went wrong!Check your name or email!");
@@ -72,6 +80,17 @@ function ContextProvider(props) {
     localStorage.setItem("access_token", `bearer ${data.token}`);
   };
 
+  const getDataForUserMainPage = () => {
+    axios
+      .get("http://localhost:8000/mainpage", { headers })
+      .then(res => {
+        //setData is not working
+        setUserData(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   return (
     <Context.Provider
       value={{
@@ -84,7 +103,9 @@ function ContextProvider(props) {
         confirmedPassword,
         setConfirmedPassword,
         handleSubmitSignUp,
-        handleSubmitLogin
+        handleSubmitLogin,
+        userData,
+        getDataForUserMainPage
       }}
     >
       {props.children}

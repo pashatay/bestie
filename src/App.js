@@ -10,9 +10,10 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import UserPage from "./pages/UserPage";
+import AddFriend from "./pages/AddFriend";
 
 function App() {
-  const { loggedUserValues } = useContext(Context);
+  const { userData } = useContext(Context);
   return (
     <div className="App">
       <Header />
@@ -21,11 +22,7 @@ function App() {
           <About />
         </Route>
         <Route path="/login">
-          {loggedUserValues.token.length > 1 ? (
-            <Redirect to="mainpage" />
-          ) : (
-            false
-          )}
+          {userData.length > 1 ? <Redirect to="mainpage" /> : false}
           <Login />
         </Route>
         <Route path="/signup">
@@ -33,6 +30,9 @@ function App() {
         </Route>
         <Route path="/mainpage">
           <UserPage />
+        </Route>
+        <Route path="/addfriend">
+          <AddFriend />
         </Route>
       </Switch>
     </div>

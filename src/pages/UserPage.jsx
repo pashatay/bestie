@@ -1,29 +1,28 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../Context";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import DisplayFriend from "../components/DisplayFriend";
 
 function UserPage() {
-  const [userData, setUserData] = useState([]);
+  const { userData, getDataForUserMainPage } = useContext(Context);
   console.log(userData);
-  const headers = {
-    Authorization: localStorage.getItem("access_token")
-  };
+
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/mainpage", { headers })
-      .then(res => {
-        //setData is not working
-        setUserData(res.data);
-        console.log(userData);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    getDataForUserMainPage();
   }, []);
+
+  const allUsersFriends = userData.map((friend, i) => {
+    return <DisplayFriend data={friend} key={i} />;
+  });
 
   return (
     <div>
       <h1>User page</h1>
+      <Link to="/addfriend">
+        <h3>Add</h3>
+      </Link>
+      {allUsersFriends}
     </div>
   );
 }
