@@ -6,28 +6,7 @@ function AddFriend() {
     first_name: "",
     last_name: "",
     dob: "",
-    relationship: "",
-    profession: "",
-    hobbies: "",
-    cuisine: "",
-    dessert: "",
-    nonalc_beverage: "",
-    alc_beverage: "",
-    color: "",
-    flowers: "",
-    movies: "",
-    books: "",
-    tv_shows: "",
-    music: "",
-    sportgames: "",
-    brands: "",
-    humour: "",
-    dreams: "",
-    fears: "",
-    chat_topics: "",
-    no_topics: "",
-    inspirations: "",
-    other: ""
+    relationship: ""
   };
 
   const { newFriend, setNewFriend } = useState(newFriendDefaultValues);
