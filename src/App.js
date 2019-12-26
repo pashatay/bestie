@@ -9,8 +9,8 @@ import Header from "./components/Header";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import UserPage from "./pages/UserPage";
 import AddFriend from "./pages/AddFriend";
+import LogOut from "./pages/LogOut";
 
 function App() {
   const { userData } = useContext(Context);
@@ -22,17 +22,16 @@ function App() {
           <About />
         </Route>
         <Route path="/login">
-          {userData.length > 1 ? <Redirect to="mainpage" /> : false}
           <Login />
         </Route>
         <Route path="/signup">
           <Signup />
         </Route>
-        <Route path="/mainpage">
-          <UserPage />
-        </Route>
         <Route path="/addfriend">
           <AddFriend />
+        </Route>
+        <Route path="/logout">
+          <LogOut />
         </Route>
       </Switch>
     </div>

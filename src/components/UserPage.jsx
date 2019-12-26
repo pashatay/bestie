@@ -2,14 +2,21 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../Context";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import DisplayFriend from "../components/DisplayFriend";
+import DisplayFriend from "./DisplayFriend";
 
 function UserPage() {
-  const { userData, getDataForUserMainPage } = useContext(Context);
-  console.log(userData);
+  const {
+    userData,
+    getDataForUserMainPage,
+    redirectTask,
+    setRedirectTask
+  } = useContext(Context);
 
+  console.log(userData);
+  console.log(redirectTask);
   useEffect(() => {
     getDataForUserMainPage();
+    setRedirectTask(false);
   }, []);
 
   const allUsersFriends = userData.map((friend, i) => {

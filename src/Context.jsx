@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 const Context = React.createContext();
@@ -9,21 +10,13 @@ function ContextProvider(props) {
     email: "",
     password: ""
   };
+
   const [formValues, setFormValues] = useState(formDefaultValues);
-
-  //will get rid of it eventualy
-  const loggedUserDefaultValues = {
-    id: "",
-    token: ""
-  };
-  const [loggedUserValues, setLoggedUserValues] = useState(
-    loggedUserDefaultValues
-  ); //
-
   const [confirmedPassword, setConfirmedPassword] = useState("");
-
+  const [userHasLoggedIn, setUserHasLoggedIn] = useState(false);
   const [anError, setAnError] = useState("");
   const [userData, setUserData] = useState([]);
+  const [redirectTask, setRedirectTask] = useState(false);
 
   const headers = {
     Authorization: localStorage.getItem("access_token")
@@ -38,7 +31,6 @@ function ContextProvider(props) {
   };
 
   const handleSubmitSignUp = e => {
-    setAnError("");
     e.preventDefault();
     if (formValues.password === confirmedPassword) {
       axios
@@ -49,7 +41,7 @@ function ContextProvider(props) {
         })
         .catch(err => {
           console.log(err);
-          setAnError("Something went wrong!Check your name or email!");
+          setAnError("User is already exist!Check your name or email!");
         });
     } else {
       setAnError("Passwords dont match!");
@@ -58,7 +50,6 @@ function ContextProvider(props) {
 
   const handleSubmitLogin = e => {
     e.preventDefault();
-    setAnError("");
     axios
       .post("http://localhost:8000/login", formValues)
       .then(res => {
@@ -70,14 +61,13 @@ function ContextProvider(props) {
       })
       .catch(err => {
         console.log(err);
-        setAnError("Something went wrong!Check your name or email!");
+        setAnError("Something went wrong!Check your email or password!");
       });
   };
 
   const userLoggedIn = data => {
-    //will get rid of setLoggedUserValues
-    setLoggedUserValues({ id: data.id, token: `bearer ${data.token}` });
     localStorage.setItem("access_token", `bearer ${data.token}`);
+    setUserHasLoggedIn(true);
   };
 
   const getDataForUserMainPage = () => {
@@ -87,15 +77,18 @@ function ContextProvider(props) {
         //setData is not working
         setUserData(res.data);
       })
+      .then(setRedirectTask(true))
       .catch(err => {
         console.log(err);
       });
+  };
+  const redirectToMainPage = () => {
+    return redirectTask ? <Redirect to="/" /> : false;
   };
   return (
     <Context.Provider
       value={{
         userLoggedIn,
-        loggedUserValues,
         anError,
         setAnError,
         formValues,
@@ -105,7 +98,13 @@ function ContextProvider(props) {
         handleSubmitSignUp,
         handleSubmitLogin,
         userData,
-        getDataForUserMainPage
+        getDataForUserMainPage,
+        setRedirectTask,
+        headers,
+        redirectTask,
+        redirectToMainPage,
+        userHasLoggedIn,
+        setUserHasLoggedIn
       }}
     >
       {props.children}

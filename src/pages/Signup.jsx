@@ -1,14 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 
 function Signup() {
   const {
     anError,
+    setAnError,
     handleChange,
     handleSubmitSignUp,
     setConfirmedPassword
   } = useContext(Context);
 
+  useEffect(() => {
+    setAnError("");
+  }, []);
   return (
     <div>
       <form onSubmit={handleSubmitSignUp}>

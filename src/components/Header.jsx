@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../Context";
 
 function Header() {
-  return (
+  const { userHasLoggedIn } = useContext(Context);
+  const notLogged = (
     <header>
       <Link to="/">
         <h1>Bestie</h1>
@@ -15,6 +17,17 @@ function Header() {
       </Link>
     </header>
   );
+  const logged = (
+    <header>
+      <Link to="/">
+        <h1>Bestie</h1>
+      </Link>
+      <Link to="/logout">
+        <h2>Log Out</h2>
+      </Link>
+    </header>
+  );
+  return <>{userHasLoggedIn ? logged : notLogged}</>;
 }
 
 export default Header;

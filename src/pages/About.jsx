@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../Context";
+import UserPage from "../components/UserPage";
 
 function About() {
-  return (
-    <div>
-      <h1>About page</h1>
-    </div>
-  );
+  const { userHasLoggedIn } = useContext(Context);
+  return <div>{userHasLoggedIn ? <UserPage /> : <h1>About page</h1>}</div>;
 }
 
 export default About;

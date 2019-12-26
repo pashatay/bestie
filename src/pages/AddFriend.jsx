@@ -1,15 +1,22 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../Context";
+import axios from "axios";
 
 function AddFriend() {
+  const {
+    headers,
+    redirectToMainPage,
+    redirectTask,
+    getDataForUserMainPage
+  } = useContext(Context);
+
   const newFriendDefaultValues = {
     first_name: "",
     last_name: "",
     dob: "",
     relationship: ""
   };
-
-  const { newFriend, setNewFriend } = useState(newFriendDefaultValues);
+  const [newFriend, setNewFriend] = useState(newFriendDefaultValues);
 
   const handleChange = e => {
     const target = e.target;
@@ -19,12 +26,28 @@ function AddFriend() {
     }));
   };
 
+  const handleSubmitAddFriend = e => {
+    e.preventDefault();
+    console.log(redirectTask);
+    axios
+      .post("http://localhost:8000/addfriend", newFriend, { headers })
+      .then(res => {
+        console.log(res);
+      })
+      .then(getDataForUserMainPage())
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       <h1>Add a new Friend</h1>
-      <form>
+      {redirectToMainPage()}
+      <form onSubmit={handleSubmitAddFriend}>
         <legend>First name:</legend>
         <input
+          required
           type="text"
           placeholder="First Name"
           name={"first_name"}
@@ -32,6 +55,7 @@ function AddFriend() {
         />
         <legend>Last name:</legend>
         <input
+          required
           type="text"
           placeholder="Last Name"
           name={"last_name"}
@@ -39,6 +63,7 @@ function AddFriend() {
         />
         <legend>Relationship:</legend>
         <input
+          required
           type="text"
           placeholder="relationship"
           name={"relationship"}
@@ -46,6 +71,7 @@ function AddFriend() {
         />
         <legend>Date of birth:</legend>
         <input
+          required
           type="date"
           placeholder="Date of Birth"
           name={"dob"}
