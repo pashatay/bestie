@@ -37,11 +37,13 @@ function ContextProvider(props) {
         .post("http://localhost:8000/signup", formValues)
         .then(res => {
           console.log(res);
-          setAnError("Congrats!Your account was created.Now you can login");
+          setAnError(
+            "Almost done! Please check your email for the link to verify your account."
+          );
         })
         .catch(err => {
-          console.log(err);
-          setAnError("User is already exist!Check your name or email!");
+          console.log({ err });
+          setAnError(err.response.data.error.message);
         });
     } else {
       setAnError("Passwords dont match!");
@@ -60,8 +62,8 @@ function ContextProvider(props) {
         getDataForUserMainPage();
       })
       .catch(err => {
-        console.log(err);
-        setAnError("Something went wrong!Check your email or password!");
+        console.log(err.response.data.error);
+        setAnError(err.response.data.error);
       });
   };
 
@@ -74,7 +76,6 @@ function ContextProvider(props) {
     axios
       .get("http://localhost:8000/mainpage", { headers })
       .then(res => {
-        //setData is not working
         setUserData(res.data);
       })
       .then(setRedirectTask(true))
