@@ -5,29 +5,33 @@ import { Context } from "../Context";
 function Header() {
   const { userHasLoggedIn } = useContext(Context);
   const notLogged = (
-    <header>
-      <Link to="/">
-        <h1>Bestie</h1>
+    <>
+      <Link to="/" className="header-bestie">
+        <h2>Bestie</h2>
       </Link>
-      <Link to="/login">
-        <h2>Login</h2>
-      </Link>
-      <Link to="/signup">
-        <h2>Sign Up</h2>
-      </Link>
-    </header>
+      <div>
+        <Link to="/login" className="header-logLinks">
+          <h2>Login</h2>
+        </Link>
+        <Link to="/signup" className="header-logLinks">
+          <h2>Sign Up</h2>
+        </Link>
+      </div>
+    </>
   );
   const logged = (
-    <header>
-      <Link to="/">
-        <h1>Bestie</h1>
+    <>
+      <Link to="/" className="header-bestie">
+        <h2>Bestie</h2>
       </Link>
-      <Link to="/logout">
+      <Link to="/logout" className="header-logOut">
         <h2>Log Out</h2>
       </Link>
-    </header>
+    </>
   );
-  return <>{userHasLoggedIn ? logged : notLogged}</>;
+  return (
+    <header className="header">{userHasLoggedIn ? logged : notLogged}</header>
+  );
 }
 
 export default Header;

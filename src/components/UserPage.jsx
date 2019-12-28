@@ -25,9 +25,10 @@ function UserPage() {
 
   return (
     <div>
-      <h1>User page</h1>
-      <Link to="/addfriend">
-        <h3>Add</h3>
+      <Link to="/addfriend" className="add-friend-button">
+        <h3 className="add-friend">
+          <i class="ri-user-add-line"></i>
+        </h3>
       </Link>
       {allUsersFriends}
     </div>

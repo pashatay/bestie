@@ -16,9 +16,10 @@ function Login() {
   }, []);
 
   return (
-    <div>
+    <div className="login-form">
       {redirectToMainPage()}
       <form onSubmit={handleSubmitLogin}>
+        <legend>Email:</legend>
         <input
           required
           type="text"
@@ -26,6 +27,7 @@ function Login() {
           name={"email"}
           onChange={handleChange}
         />
+        <legend>Password:</legend>
         <input
           required
           type="password"
@@ -33,9 +35,9 @@ function Login() {
           name={"password"}
           onChange={handleChange}
         />
-        <input type="submit"></input>
+        <input type="submit" className="button"></input>
       </form>
-      <h4>{anError}</h4>
+      <h4 className="error">{anError}</h4>
     </div>
   );
 }

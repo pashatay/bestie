@@ -1,13 +1,124 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Rock Salt", cursive;
+  background: #fff7ec;
+  color: #6a6e92;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  background: #e6c8d7;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+}
+.header > div {
+  margin: 0 0 0 40%;
+  font-size: 0.6em;
+}
+.header-logLinks:link,
+.header-loglinks:visited,
+.header-logOut:link,
+.header-logOut:visited,
+.header-bestie:link,
+.header-bestie:visited,
+.add-friend-button:link,
+.add-friend-button:visited {
+  text-decoration: none;
+  color: #6a6e92;
+}
+
+.header-bestie {
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-logLinks {
+  color: #6a6e92;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.header-logOut {
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 0.6em;
+  margin: 0 0 0 30%;
+}
+.signup-form {
+  width: 100vw;
+  margin: auto;
+  padding-top: 10%;
+}
+.login-form {
+  width: 100vw;
+  margin: auto;
+  padding-top: 30%;
+}
+input {
+  height: 35px;
+  width: 70%;
+  font-size: 1.2em;
+}
+.button {
+  margin-top: 5%;
+  height: 35px;
+  width: 70%;
+  background: #e6c8d7;
+  border: 1px solid #6a6e92;
+}
+
+.button:hover {
+  background: #cacea4;
+}
+
+.error {
+  font-size: 18px;
+  color: rgb(184, 83, 83);
+}
+
+.bestie {
+  list-style: none;
+  border: 3px solid #6a6e92;
+  background: #e6c8d7;
+  width: 210px;
+  height: 210px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  padding: 12%;
+  border-radius: 50%;
+}
+
+.add-friend-button {
+  font-size: 48px;
+}
+.add-friend {
+  margin: 0;
+  padding: 0;
+}
+
+.ri-close-circle-fill {
+  float: right;
+  margin-right: 13%;
+  margin-top: -50%;
+  font-size: 35px;
+  color: rgb(184, 83, 83);
+}
+
+.ri-settings-3-fill {
+  float: left;
+  margin-left: 13%;
+  margin-top: -50%;
+  font-size: 35px;
+  color: rgb(87, 151, 96);
 }

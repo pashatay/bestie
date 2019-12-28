@@ -86,6 +86,7 @@ function ContextProvider(props) {
   const redirectToMainPage = () => {
     return redirectTask ? <Redirect to="/" /> : false;
   };
+
   return (
     <Context.Provider
       value={{

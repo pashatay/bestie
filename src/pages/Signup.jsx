@@ -14,8 +14,9 @@ function Signup() {
     setAnError("");
   }, []);
   return (
-    <div>
+    <div className="signup-form">
       <form onSubmit={handleSubmitSignUp}>
+        <legend>Your name:</legend>
         <input
           required
           type="text"
@@ -23,6 +24,7 @@ function Signup() {
           name={"name"}
           onChange={handleChange}
         />
+        <legend>Email:</legend>
         <input
           required
           type="email"
@@ -30,6 +32,7 @@ function Signup() {
           name={"email"}
           onChange={handleChange}
         />
+        <legend>Password:</legend>
         <input
           required
           type="password"
@@ -37,15 +40,17 @@ function Signup() {
           name={"password"}
           onChange={handleChange}
         />
+        <legend>Re-enter password:</legend>
         <input
           required
           type="password"
-          placeholder="re-enter password"
+          placeholder="password"
           onChange={e => setConfirmedPassword(e.target.value)}
         />
-        <input type="submit"></input>
+        <br />
+        <input type="submit" className="button"></input>
       </form>
-      <h4>{anError}</h4>
+      <h4 className="error">{anError}</h4>
     </div>
   );
 }

@@ -42,7 +42,7 @@ function AddFriend() {
 
   return (
     <div>
-      <h1>Add a new Friend</h1>
+      <h1>Add a new Bestie</h1>
       {redirectToMainPage()}
       <form onSubmit={handleSubmitAddFriend}>
         <legend>First name:</legend>
@@ -77,7 +77,7 @@ function AddFriend() {
           name={"dob"}
           onChange={handleChange}
         />
-        <input type="submit"></input>
+        <input type="submit" className="button"></input>
       </form>
     </div>
   );
