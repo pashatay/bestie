@@ -7,6 +7,7 @@ function AddFriend() {
     headers,
     redirectToMainPage,
     redirectTask,
+    setRedirectTask,
     getDataForUserMainPage
   } = useContext(Context);
 
@@ -31,10 +32,8 @@ function AddFriend() {
     console.log(redirectTask);
     axios
       .post("http://localhost:8000/addfriend", newFriend, { headers })
-      .then(res => {
-        console.log(res);
-      })
       .then(getDataForUserMainPage())
+      .then(setRedirectTask(true))
       .catch(err => {
         console.log(err);
       });

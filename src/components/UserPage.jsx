@@ -7,9 +7,12 @@ import DisplayFriend from "./DisplayFriend";
 function UserPage() {
   const {
     userData,
+    headers,
     getDataForUserMainPage,
     redirectTask,
-    setRedirectTask
+    setRedirectTask,
+    redirectToMainPage,
+    setUserHasLoggedIn
   } = useContext(Context);
 
   console.log(userData);
@@ -27,10 +30,14 @@ function UserPage() {
     <div>
       <Link to="/addfriend" className="add-friend-button">
         <h3 className="add-friend">
-          <i class="ri-user-add-line"></i>
+          <i className="ri-user-add-line"></i>
         </h3>
       </Link>
       {allUsersFriends}
+      <footer className="user-account-buttons">
+        <Link to="/edituser">edit account</Link>
+        <Link to="/deleteuser">delete account</Link>
+      </footer>
     </div>
   );
 }

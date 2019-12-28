@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../Context";
 import moment from "moment";
 import axios from "axios";
@@ -6,14 +6,14 @@ import axios from "axios";
 function DisplayFriend(data) {
   const {
     headers,
-    setUserData,
-    setRedirectTask,
-    redirectToMainPage
+    getDataForUserMainPage,
+    redirectTask,
+    setRedirectTask
   } = useContext(Context);
 
   const [hovered, setHovered] = useState(false);
-
   const element = data.data;
+
   const dob = moment(element["dob"]).format("MMM Do YY");
   const years = moment().diff(element["dob"], "years");
   const friendId = element.id;
@@ -30,26 +30,23 @@ function DisplayFriend(data) {
   );
 
   const handleDeleteFriend = e => {
+    e.preventDefault();
     axios
-      .delete(
-        "http://localhost:8000/usersfriend",
-        { body: { friendId } },
-        { headers }
-      )
-      .then(res => {
-        console.log(res);
-      })
+      .delete(`http://localhost:8000/usersfriend/${friendId}`, { headers })
       .then(setRedirectTask(true))
-      .then(redirectToMainPage())
       .catch(err => {
         console.log(err);
       });
-    console.log(friendId);
   };
+
+  useEffect(() => {
+    getDataForUserMainPage();
+    setRedirectTask(false);
+  }, [redirectTask]);
+
   const deleteIcon = hovered && (
-    <i class="ri-close-circle-fill" onClick={() => handleDeleteFriend()}></i>
+    <i className="ri-close-circle-fill" onClick={handleDeleteFriend}></i>
   );
-  const editIcon = hovered && <i class="ri-settings-3-fill"></i>;
 
   return (
     <div
@@ -57,7 +54,6 @@ function DisplayFriend(data) {
       onMouseLeave={() => setHovered(false)}
     >
       {friend}
-      {editIcon}
       {deleteIcon}
     </div>
   );

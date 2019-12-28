@@ -1,9 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 import UserPage from "../components/UserPage";
 
 function About() {
-  const { userHasLoggedIn } = useContext(Context);
+  const { userHasLoggedIn, setRedirectTask } = useContext(Context);
+
+  useEffect(() => {
+    setRedirectTask(false);
+  }, []);
+
   return <div>{userHasLoggedIn ? <UserPage /> : <h1>About page</h1>}</div>;
 }
 

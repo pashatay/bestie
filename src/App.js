@@ -11,6 +11,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import AddFriend from "./pages/AddFriend";
 import LogOut from "./pages/LogOut";
+import DeleteUser from "./pages/DeleteUser";
+import EditUser from "./pages/EditUser";
 
 function App() {
   const { userData } = useContext(Context);
@@ -32,6 +34,12 @@ function App() {
         </Route>
         <Route path="/logout">
           <LogOut />
+        </Route>
+        <Route path="/deleteuser">
+          <DeleteUser />
+        </Route>
+        <Route path="/edituser">
+          <EditUser />
         </Route>
       </Switch>
     </div>

@@ -61,9 +61,11 @@ function ContextProvider(props) {
       .then(() => {
         getDataForUserMainPage();
       })
+      .then(setRedirectTask(true))
       .catch(err => {
         console.log(err.response.data.error);
         setAnError(err.response.data.error);
+        setRedirectTask(false);
       });
   };
 
@@ -78,7 +80,6 @@ function ContextProvider(props) {
       .then(res => {
         setUserData(res.data);
       })
-      .then(setRedirectTask(true))
       .catch(err => {
         console.log(err);
       });
@@ -87,6 +88,31 @@ function ContextProvider(props) {
     return redirectTask ? <Redirect to="/" /> : false;
   };
 
+  const handleSubmitChangeEmail = e => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:8000/mainpage", formValues, { headers })
+      .then(res => {
+        setAnError(
+          "Almost done! Please check your email for the link to verify your account."
+        );
+      })
+      .catch(err => {
+        console.log(err.response.data.error);
+        setAnError(err.response.data.error);
+      });
+  };
+  const handleSubmitChangePassword = e => {
+    if (formValues.password === confirmedPassword) {
+      e.preventDefault();
+      axios
+        .post("http://localhost:8000/mainpage", formValues, { headers })
+        .catch(err => {
+          console.log(err.response.data.error);
+          setAnError(err.response.data.error);
+        });
+    }
+  };
   return (
     <Context.Provider
       value={{
@@ -106,7 +132,9 @@ function ContextProvider(props) {
         redirectTask,
         redirectToMainPage,
         userHasLoggedIn,
-        setUserHasLoggedIn
+        setUserHasLoggedIn,
+        handleSubmitChangeEmail,
+        handleSubmitChangePassword
       }}
     >
       {props.children}

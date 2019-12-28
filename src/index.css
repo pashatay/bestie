@@ -108,17 +108,18 @@ input {
 }
 
 .ri-close-circle-fill {
-  float: right;
-  margin-right: 13%;
-  margin-top: -50%;
-  font-size: 35px;
+  position: absolute;
+  margin: auto;
+  margin-top: -90px;
+  margin-left: -23px;
+  font-size: 50px;
   color: rgb(184, 83, 83);
 }
 
-.ri-settings-3-fill {
-  float: left;
-  margin-left: 13%;
-  margin-top: -50%;
-  font-size: 35px;
-  color: rgb(87, 151, 96);
+footer > h3 {
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }
