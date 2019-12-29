@@ -17,7 +17,6 @@ function DeleteUser() {
       .delete("http://localhost:8000/mainpage", { headers })
       .then(setUserHasLoggedIn(false))
       .then(setRedirectTask(true))
-      .then(redirectToMainPage())
       .catch(err => {
         console.log(err);
       });
@@ -25,9 +24,10 @@ function DeleteUser() {
 
   return (
     <div>
+      {redirectToMainPage()}
       <p>
-        Are you sure you want to delete your page? If you will press yes, all
-        data will be deleted without an option to restore it!
+        Are you sure you want to delete your page? If you press yes, all your
+        information will be erased permanently.
       </p>
       <button onClick={handleDeleteAccount}>Yes</button>
       <Link to="/">

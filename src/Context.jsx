@@ -46,7 +46,7 @@ function ContextProvider(props) {
           setAnError(err.response.data.error.message);
         });
     } else {
-      setAnError("Passwords dont match!");
+      setAnError("Passwords don't match!");
     }
   };
 
@@ -55,17 +55,14 @@ function ContextProvider(props) {
     axios
       .post("http://localhost:8000/login", formValues)
       .then(res => {
-        console.log(res.data);
         userLoggedIn(res.data);
+        setRedirectTask(true);
+        setAnError("");
       })
-      .then(() => {
-        getDataForUserMainPage();
-      })
-      .then(setRedirectTask(true))
       .catch(err => {
-        console.log(err.response.data.error);
-        setAnError(err.response.data.error);
         setRedirectTask(false);
+        console.log({ err });
+        setAnError(err.response.data.error.message);
       });
   };
 
@@ -89,27 +86,37 @@ function ContextProvider(props) {
   };
 
   const handleSubmitChangeEmail = e => {
+    formValues.password = "";
     e.preventDefault();
     axios
       .post("http://localhost:8000/mainpage", formValues, { headers })
+      .then(setUserHasLoggedIn(false))
       .then(res => {
-        setAnError(
-          "Almost done! Please check your email for the link to verify your account."
-        );
+        setAnError(res.data.message.message);
       })
+      .then(setFormValues(formDefaultValues))
       .catch(err => {
-        console.log(err.response.data.error);
-        setAnError(err.response.data.error);
+        console.log(err.response.data.error.message);
+        setAnError(err.response.data.error.message);
       });
   };
   const handleSubmitChangePassword = e => {
-    if (formValues.password === confirmedPassword) {
+    formValues.email = "";
+    if (formValues.password != confirmedPassword) {
+      e.preventDefault();
+      setAnError("Passwords don't match!");
+    } else {
       e.preventDefault();
       axios
         .post("http://localhost:8000/mainpage", formValues, { headers })
+        .then(setUserHasLoggedIn(false))
+        .then(res => {
+          setAnError(res.data.message.message);
+        })
+        .then(setFormValues(formDefaultValues))
         .catch(err => {
-          console.log(err.response.data.error);
-          setAnError(err.response.data.error);
+          console.log({ err });
+          setAnError(err.response.data.error.message || "error");
         });
     }
   };
