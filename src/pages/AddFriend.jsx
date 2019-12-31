@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { Context } from "../Context";
 import axios from "axios";
 
+import pig from "../images/pig.png";
+
 function AddFriend() {
   const {
     headers,
@@ -44,7 +46,6 @@ function AddFriend() {
       <h1>Add a new Bestie</h1>
       {redirectToMainPage()}
       <form onSubmit={handleSubmitAddFriend}>
-        <legend>First name:</legend>
         <input
           required
           type="text"
@@ -52,7 +53,7 @@ function AddFriend() {
           name={"first_name"}
           onChange={handleChange}
         />
-        <legend>Last name:</legend>
+
         <input
           required
           type="text"
@@ -60,7 +61,7 @@ function AddFriend() {
           name={"last_name"}
           onChange={handleChange}
         />
-        <legend>Relationship:</legend>
+
         <input
           required
           type="text"
@@ -68,7 +69,7 @@ function AddFriend() {
           name={"relationship"}
           onChange={handleChange}
         />
-        <legend>Date of birth:</legend>
+
         <input
           required
           type="date"
@@ -76,8 +77,9 @@ function AddFriend() {
           name={"dob"}
           onChange={handleChange}
         />
-        <input type="submit" className="button"></input>
+        <input type="submit" className="button" value="Add Friend"></input>
       </form>
+      <img src={pig} className="addfriend-img" />
     </div>
   );
 }

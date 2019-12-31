@@ -19,14 +19,16 @@ function DisplayFriend(data) {
   const friendId = element.id;
 
   const friend = (
-    <ul className="bestie">
-      <li>
-        {element["first_name"]} {element["last_name"]}
-      </li>
-      <li>{element["relationship"]}</li>
-      <li>{dob}</li>
-      <li>{years} old</li>
-    </ul>
+    <div className="bestie">
+      <ul>
+        <li>
+          {element["first_name"]} {element["last_name"]}
+        </li>
+        <li>{element["relationship"]}</li>
+        <li>{dob}</li>
+        <li>{years} y.o.</li>
+      </ul>
+    </div>
   );
 
   const handleDeleteFriend = e => {

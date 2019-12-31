@@ -2,6 +2,8 @@ import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../Context";
 import { Redirect } from "react-router-dom";
 
+import cake from "../images/cake.png";
+
 function Login() {
   const {
     anError,
@@ -19,7 +21,6 @@ function Login() {
     <div className="login-form">
       {redirectToMainPage()}
       <form onSubmit={handleSubmitLogin}>
-        <legend>Email:</legend>
         <input
           required
           type="text"
@@ -27,7 +28,7 @@ function Login() {
           name={"email"}
           onChange={handleChange}
         />
-        <legend>Password:</legend>
+
         <input
           required
           type="password"
@@ -35,9 +36,10 @@ function Login() {
           name={"password"}
           onChange={handleChange}
         />
-        <input type="submit" className="button"></input>
+        <input type="submit" className="button" value="Log In"></input>
       </form>
       <h4 className="error">{anError}</h4>
+      <img src={cake} className="login-img" />
     </div>
   );
 }

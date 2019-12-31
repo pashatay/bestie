@@ -3,6 +3,8 @@ import { Context } from "../Context";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import pencil from "../images/pencil.png";
+
 function EditUser() {
   const {
     anError,
@@ -15,7 +17,6 @@ function EditUser() {
   return (
     <div className="signup-form">
       <form onSubmit={handleSubmitChangeEmail}>
-        <legend>Change Email:</legend>
         <input
           required
           type="email"
@@ -23,10 +24,11 @@ function EditUser() {
           name={"email"}
           onChange={handleChange}
         />
-        <input type="submit" className="button"></input>
+        <input type="submit" className="button" value="Change Email"></input>
       </form>
+      <br />
+      <br />
       <form onSubmit={handleSubmitChangePassword}>
-        <legend>Change Password:</legend>
         <input
           required
           type="password"
@@ -34,7 +36,7 @@ function EditUser() {
           name={"password"}
           onChange={handleChange}
         />
-        <legend>Re-enter password:</legend>
+
         <input
           required
           type="password"
@@ -42,9 +44,10 @@ function EditUser() {
           onChange={e => setConfirmedPassword(e.target.value)}
         />
         <br />
-        <input type="submit" className="button"></input>
+        <input type="submit" className="button" value="Change Password"></input>
       </form>
       <h4 className="error">{anError}</h4>
+      <img src={pencil} className="edit-img" />
     </div>
   );
 }

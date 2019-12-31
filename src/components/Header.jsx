@@ -7,7 +7,7 @@ function Header() {
   const notLogged = (
     <>
       <Link to="/" className="header-bestie">
-        <h2>Bestie</h2>
+        <h2>Best!e</h2>
       </Link>
       <div>
         <Link to="/login" className="header-logLinks">
@@ -22,7 +22,7 @@ function Header() {
   const logged = (
     <>
       <Link to="/" className="header-bestie">
-        <h2>Bestie</h2>
+        <h2>Best!e</h2>
       </Link>
       <Link to="/logout" className="header-logOut">
         <h2>Log Out</h2>

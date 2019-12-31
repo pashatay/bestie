@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 
+import gift from "../images/gift.png";
+
 function Signup() {
   const {
     anError,
@@ -16,7 +18,6 @@ function Signup() {
   return (
     <div className="signup-form">
       <form onSubmit={handleSubmitSignUp}>
-        <legend>Your name:</legend>
         <input
           required
           type="text"
@@ -24,7 +25,7 @@ function Signup() {
           name={"name"}
           onChange={handleChange}
         />
-        <legend>Email:</legend>
+
         <input
           required
           type="email"
@@ -32,7 +33,7 @@ function Signup() {
           name={"email"}
           onChange={handleChange}
         />
-        <legend>Password:</legend>
+
         <input
           required
           type="password"
@@ -40,7 +41,7 @@ function Signup() {
           name={"password"}
           onChange={handleChange}
         />
-        <legend>Re-enter password:</legend>
+
         <input
           required
           type="password"
@@ -48,9 +49,10 @@ function Signup() {
           onChange={e => setConfirmedPassword(e.target.value)}
         />
         <br />
-        <input type="submit" className="button"></input>
+        <input type="submit" className="button" value="Sign Up"></input>
       </form>
       <h4 className="error">{anError}</h4>
+      <img src={gift} className="signup-img" />
     </div>
   );
 }
