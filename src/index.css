@@ -109,20 +109,25 @@ input[type="submit"] {
   font-size: 18px;
   color: rgb(184, 83, 83);
 }
-
-.bestie {
+.all-besties {
+  display: flex;
+  flex-direction: column;
+}
+.bestie-box {
   border: 3px solid #6a6e92;
   background: rgb(196, 219, 242);
-  width: 265px;
-  height: 265px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
   margin-bottom: 5%;
   padding: 2%;
   border-radius: 50%;
-  font-size: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.bestie {
+  font-size: 1.6em;
 }
 ul {
   margin: 0;
@@ -149,8 +154,7 @@ li {
 .ri-close-circle-fill {
   position: absolute;
   margin: auto;
-  margin-top: -80px;
-  margin-left: -24px;
+  margin-top: 26%;
   font-size: 50px;
   color: rgb(184, 93, 93);
 }
@@ -168,6 +172,8 @@ footer {
   cursor: pointer;
 }
 .app-info {
+  width: 80%;
+  margin: auto;
   font-size: 1.2em;
   display: flex;
   flex-direction: column;
@@ -179,12 +185,19 @@ img {
   width: 200px;
   margin: auto;
 }
+.cake2 {
+  display: none;
+}
 .builtby {
+  font-size: 1em;
   float: right;
   margin: 1%;
+  margin-top: 5%;
   margin-right: 3%;
 }
-
+.edit-form {
+  margin-top: 5%;
+}
 .edit-img {
   margin-top: 0%;
   width: 270px;
@@ -249,6 +262,9 @@ img {
     width: 240px;
     text-align: center;
   }
+  .ri-close-circle-fill {
+    margin-top: 28%;
+  }
 }
 
 /* medium phones */
@@ -293,6 +309,100 @@ img {
   .header-bestie {
     font-size: 2em;
   }
-  section {
+
+  .app-info {
+    width: 60%;
+    margin: auto;
+    font-size: 1.7em;
+  }
+
+  .cake,
+  .socialmedia,
+  .friends {
+    display: none;
+  }
+  .cake2 {
+    display: block;
+  }
+  .hug,
+  .cake2 {
+    width: 300px;
+  }
+  .all-besties {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bestie-box {
+    margin: 2%;
+  }
+  .ri-close-circle-fill {
+    margin-top: 0%;
+    font-size: 100px;
+  }
+  .add-friend {
+    margin-top: 2%;
+    margin-bottom: 0;
+  }
+  .add-friend-button {
+    font-size: 68px;
+  }
+  footer {
+    height: 50px;
+    font-size: 1.4em;
+  }
+  .add-new-friend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .addfriend-img {
+    width: 100%;
+    max-width: 460px;
+    margin: auto;
+  }
+  .login-form,
+  .signup-form,
+  .add-new-friend,
+  .edit-form,
+  .delete-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin-top: 5%;
+  }
+  form {
+    flex-grow: 1;
+    margin: 0;
+  }
+  .signup-img {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+  }
+  .login-img {
+    width: 100%;
+    max-width: 270px;
+    margin: auto;
+    margin-right: 5%;
+  }
+  .edit-img {
+    display: none;
+  }
+  .delete-info {
+    font-size: 1.7em;
+  }
+  .delete-info-button {
+    margin: 3%;
+  }
+  .delete-img {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    margin-right: 5%;
+  }
+  .builtby {
+    font-size: 1.3em;
   }
 }

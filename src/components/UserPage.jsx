@@ -27,20 +27,20 @@ function UserPage() {
   });
 
   return (
-    <div>
+    <>
       <div className="wrapper">
         <Link to="/addfriend" className="add-friend-button">
           <h3 className="add-friend">
             <i className="ri-user-add-line"></i>
           </h3>
         </Link>
-        <section className="All-besties">{allUsersFriends}</section>
+        <section className="all-besties">{allUsersFriends}</section>
       </div>
       <footer className="user-account-buttons">
         <Link to="/edituser">edit account</Link>
         <Link to="/deleteuser">delete account</Link>
       </footer>
-    </div>
+    </>
   );
 }
 

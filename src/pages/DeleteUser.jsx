@@ -26,20 +26,22 @@ function DeleteUser() {
 
   return (
     <>
-      <div>
-        {redirectToMainPage()}
-        <p className="delete-info">
-          Are you sure you want to delete your page? If you press yes, all your
-          information will be erased permanently.
-        </p>
-        <button onClick={handleDeleteAccount} className="delete-info-button">
-          Yes
-        </button>
-        <Link to="/">
-          <button className="delete-info-button">No</button>
-        </Link>
-      </div>
-      <img src={deleteImg} className="delete-img" />
+      <section className="delete-section">
+        <div>
+          {redirectToMainPage()}
+          <p className="delete-info">
+            Are you sure you want to delete your page? If you press yes, all
+            your information will be erased permanently.
+          </p>
+          <button onClick={handleDeleteAccount} className="delete-info-button">
+            Yes
+          </button>
+          <Link to="/">
+            <button className="delete-info-button">No</button>
+          </Link>
+        </div>
+        <img src={deleteImg} className="delete-img" />
+      </section>
     </>
   );
 }

@@ -54,6 +54,7 @@ function DisplayFriend(data) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className="bestie-box"
     >
       {friend}
       {deleteIcon}
