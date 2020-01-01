@@ -1,8 +1,7 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
-import { Redirect } from "react-router-dom";
 
-import cake from "../images/cake.png";
+import loginImg from "../images/login.png";
 
 function Login() {
   const {
@@ -39,7 +38,7 @@ function Login() {
         <input type="submit" className="button" value="Log In"></input>
       </form>
       <h4 className="error">{anError}</h4>
-      <img src={cake} className="login-img" />
+      <img src={loginImg} className="login-img" />
     </div>
   );
 }

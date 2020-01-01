@@ -90,9 +90,9 @@ function ContextProvider(props) {
     e.preventDefault();
     axios
       .post("http://localhost:8000/mainpage", formValues, { headers })
-      .then(setUserHasLoggedIn(false))
       .then(res => {
         setAnError(res.data.message.message);
+        setUserHasLoggedIn(false);
       })
       .then(setFormValues(formDefaultValues))
       .catch(err => {

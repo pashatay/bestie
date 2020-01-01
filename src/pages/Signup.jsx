@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 
-import gift from "../images/gift.png";
+import signupImg from "../images/signup.png";
 
 function Signup() {
   const {
@@ -52,7 +52,7 @@ function Signup() {
         <input type="submit" className="button" value="Sign Up"></input>
       </form>
       <h4 className="error">{anError}</h4>
-      <img src={gift} className="signup-img" />
+      <img src={signupImg} className="signup-img" />
     </div>
   );
 }

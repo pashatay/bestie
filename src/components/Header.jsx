@@ -14,7 +14,7 @@ function Header() {
           <h2>Login</h2>
         </Link>
         <Link to="/signup" className="header-logLinks">
-          <h2>Sign Up</h2>
+          <h2>SignUp</h2>
         </Link>
       </div>
     </>

@@ -34,7 +34,7 @@ function UserPage() {
             <i className="ri-user-add-line"></i>
           </h3>
         </Link>
-        {allUsersFriends}
+        <section className="All-besties">{allUsersFriends}</section>
       </div>
       <footer className="user-account-buttons">
         <Link to="/edituser">edit account</Link>

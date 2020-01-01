@@ -43,9 +43,9 @@ function AddFriend() {
 
   return (
     <div>
-      <h1>Add a new Bestie</h1>
+      <h1 className="add-new-friend-title">Add a new Bestie</h1>
       {redirectToMainPage()}
-      <form onSubmit={handleSubmitAddFriend}>
+      <form onSubmit={handleSubmitAddFriend} className="add-new-friend-form">
         <input
           required
           type="text"

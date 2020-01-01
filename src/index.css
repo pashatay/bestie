@@ -35,7 +35,9 @@ code {
 .add-friend-button:link,
 .add-friend-button:visited,
 footer a:link,
-footer a:visited {
+footer a:visited,
+.builtby:link,
+.builtby:visited {
   text-decoration: none;
   color: #6a6e92;
 }
@@ -51,9 +53,6 @@ footer a:visited {
 
 .header-logLinks {
   color: #6a6e92;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
   font-size: 1.2em;
   cursor: pointer;
 }
@@ -69,14 +68,19 @@ footer a:visited {
   margin: auto;
   padding-top: 10%;
 }
+.signup-img {
+  margin-top: 0%;
+  width: 350px;
+}
 .login-form {
   width: 100vw;
   margin: auto;
-  padding-top: 30%;
+  padding-top: 20%;
   font-size: 1em;
 }
-.login-form legend {
-  font-size: 1.6em;
+.login-img {
+  margin-top: 10%;
+  width: 200px;
 }
 input {
   height: 55px;
@@ -138,7 +142,10 @@ li {
   margin-bottom: 2%;
   padding: 0;
 }
-
+.addfriend-img {
+  margin-top: 0%;
+  width: 300px;
+}
 .ri-close-circle-fill {
   position: absolute;
   margin: auto;
@@ -172,22 +179,120 @@ img {
   width: 200px;
   margin: auto;
 }
-
-.login-img {
-  margin-top: 10%;
-  width: 150px;
-}
-
-.signup-img {
-  margin-top: 0%;
-  width: 250px;
+.builtby {
+  float: right;
+  margin: 1%;
+  margin-right: 3%;
 }
 
 .edit-img {
   margin-top: 0%;
   width: 270px;
 }
-.addfriend-img {
-  margin-top: 0%;
+
+.delete-info {
+  font-size: 1.2em;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+.delete-info-button {
+  margin: 8%;
+  font-size: 1.3em;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #6a6e92;
+  background: rgb(196, 219, 242);
+  border-radius: 50%;
+}
+.delete-info-button:hover {
+  background: #b9bf88;
+}
+.delete-img {
+  margin-top: 10%;
   width: 300px;
+  text-align: center;
+}
+
+/* small phones */
+@media (max-height: 640px) {
+  img {
+    width: 170px;
+  }
+  .login-form {
+    padding-top: 10%;
+    font-size: 1em;
+  }
+  .login-img {
+    margin-top: 3%;
+    width: 120px;
+  }
+  .signup-form {
+    padding-top: 3%;
+  }
+  .signup-img {
+    margin-top: -4%;
+    width: 200px;
+  }
+  .add-new-friend-title {
+    font-size: 1.5em;
+  }
+  .addfriend-img {
+    display: none;
+  }
+  .edit-img {
+    display: none;
+  }
+  .delete-img {
+    margin-top: 1%;
+    width: 240px;
+    text-align: center;
+  }
+}
+
+/* medium phones */
+@media (max-height: 740px) and (min-height: 641px) {
+  .login-form {
+    padding-top: 10%;
+    font-size: 1em;
+  }
+  .login-img {
+    margin-top: 3%;
+    width: 170px;
+  }
+  .signup-form {
+    padding-top: 3%;
+  }
+  .signup-img {
+    margin-top: -4%;
+    width: 270px;
+  }
+  .add-new-friend-title {
+    font-size: 1.5em;
+    margin-bottom: -1%;
+  }
+  .addfriend-img {
+    width: 230px;
+  }
+  .edit-img {
+    margin-top: -3%;
+    width: 230px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-logLinks {
+    width: 120px;
+    justify-content: center;
+  }
+  .header > div {
+    display: flex;
+    font-size: 1em;
+  }
+  .header-bestie {
+    font-size: 2em;
+  }
+  section {
+  }
 }
