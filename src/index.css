@@ -63,6 +63,12 @@ footer a:visited,
   margin: 0 0 0 30%;
   cursor: pointer;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
 .signup-form {
   width: 100vw;
   margin: auto;
@@ -106,7 +112,7 @@ input[type="submit"] {
 }
 
 .error {
-  font-size: 18px;
+  font-size: 1em;
   color: rgb(184, 83, 83);
 }
 .all-besties {
@@ -254,6 +260,9 @@ img {
   .addfriend-img {
     display: none;
   }
+  .edit-form {
+    margin-top: 1%;
+  }
   .edit-img {
     display: none;
   }
@@ -292,8 +301,7 @@ img {
     width: 230px;
   }
   .edit-img {
-    margin-top: -3%;
-    width: 230px;
+    display: none;
   }
 }
 
@@ -363,14 +371,20 @@ img {
   }
   .login-form,
   .signup-form,
-  .add-new-friend,
   .edit-form,
   .delete-section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
-    margin-top: 5%;
+    margin-top: 3%;
+  }
+  .add-new-friend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin-top: 1%;
   }
   form {
     flex-grow: 1;
@@ -404,5 +418,13 @@ img {
   }
   .builtby {
     font-size: 1.3em;
+  }
+  .error {
+    position: fixed;
+    bottom: 5%;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    font-size: 1.2em;
   }
 }

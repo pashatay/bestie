@@ -10,7 +10,7 @@ function About() {
     setRedirectTask(false);
   }, []);
 
-  return <div>{userHasLoggedIn ? <UserPage /> : <Info />}</div>;
+  return <>{userHasLoggedIn ? <UserPage /> : <Info />}</>;
 }
 
 export default About;

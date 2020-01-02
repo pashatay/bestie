@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { Context } from "./Context";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import config from "./config";
 
 import Header from "./components/Header";
 import About from "./pages/About";
@@ -15,7 +13,6 @@ import DeleteUser from "./pages/DeleteUser";
 import EditUser from "./pages/EditUser";
 
 function App() {
-  const { userData } = useContext(Context);
   return (
     <div className="App">
       <Header />

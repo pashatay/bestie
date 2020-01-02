@@ -4,6 +4,7 @@ import { Context } from "../Context";
 
 function Header() {
   const { userHasLoggedIn } = useContext(Context);
+
   const notLogged = (
     <>
       <Link to="/" className="header-bestie">
@@ -19,6 +20,7 @@ function Header() {
       </div>
     </>
   );
+
   const logged = (
     <>
       <Link to="/" className="header-bestie">
@@ -29,6 +31,7 @@ function Header() {
       </Link>
     </>
   );
+
   return (
     <header className="header">{userHasLoggedIn ? logged : notLogged}</header>
   );

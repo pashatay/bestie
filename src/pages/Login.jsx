@@ -17,7 +17,7 @@ function Login() {
   }, []);
 
   return (
-    <div className="login-form">
+    <section className="login-form">
       {redirectToMainPage()}
       <form onSubmit={handleSubmitLogin}>
         <input
@@ -39,7 +39,7 @@ function Login() {
       </form>
       <h4 className="error">{anError}</h4>
       <img src={loginImg} className="login-img" />
-    </div>
+    </section>
   );
 }
 

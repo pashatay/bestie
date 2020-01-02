@@ -1,18 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Context } from "../Context";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import DisplayFriend from "./DisplayFriend";
 
 function UserPage() {
   const {
     userData,
-    headers,
     getDataForUserMainPage,
     redirectTask,
-    setRedirectTask,
-    redirectToMainPage,
-    setUserHasLoggedIn
+    setRedirectTask
   } = useContext(Context);
 
   console.log(userData);

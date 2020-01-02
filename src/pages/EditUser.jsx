@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../Context";
-import { Link } from "react-router-dom";
-import axios from "axios";
 
 import pencil from "../images/pencil.png";
 
@@ -16,7 +14,7 @@ function EditUser() {
 
   return (
     <>
-      <div className="edit-form">
+      <section className="edit-form">
         <form onSubmit={handleSubmitChangeEmail}>
           <input
             required
@@ -28,7 +26,9 @@ function EditUser() {
           <input type="submit" className="button" value="Change Email"></input>
         </form>
         <br />
+
         <br />
+        <h4 className="error">{anError}</h4>
         <form onSubmit={handleSubmitChangePassword}>
           <input
             required
@@ -51,8 +51,7 @@ function EditUser() {
             value="Change Password"
           ></input>
         </form>
-        <h4 className="error">{anError}</h4>
-      </div>
+      </section>
       <img src={pencil} className="edit-img" />
     </>
   );

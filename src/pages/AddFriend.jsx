@@ -8,7 +8,6 @@ function AddFriend() {
   const {
     headers,
     redirectToMainPage,
-    redirectTask,
     setRedirectTask,
     getDataForUserMainPage
   } = useContext(Context);
@@ -31,7 +30,6 @@ function AddFriend() {
 
   const handleSubmitAddFriend = e => {
     e.preventDefault();
-    console.log(redirectTask);
     axios
       .post("http://localhost:8000/addfriend", newFriend, { headers })
       .then(getDataForUserMainPage())
@@ -42,7 +40,7 @@ function AddFriend() {
   };
 
   return (
-    <div className="add-new-friend">
+    <section className="add-new-friend">
       {redirectToMainPage()}
       <form onSubmit={handleSubmitAddFriend} className="add-new-friend-form">
         <h1 className="add-new-friend-title">Add a new Bestie</h1>
@@ -80,7 +78,7 @@ function AddFriend() {
         <input type="submit" className="button" value="Add Friend"></input>
       </form>
       <img src={pig} className="addfriend-img" />
-    </div>
+    </section>
   );
 }
 

@@ -7,7 +7,7 @@ import friends from "../images/friends.png";
 
 function Info() {
   return (
-    <div>
+    <section>
       <p className="app-info">
         <img src={hug} className="hug" />
         &ensp; Isn’t it lovely when someone calls you bestie?! I wouldn’t know
@@ -32,9 +32,8 @@ function Info() {
         <img src={socialmedia} className="socialmedia" />
         <img src={cake} className="cake2" />
         &ensp;Bestie app will send you an email reminding you to congratulate
-        your friend on their birthday! All you have to do is to add your
-        friend’s information to your account. You can add as many friends as you
-        want.
+        your friend on their birthday! All you have to do is add your friend’s
+        information to your account. You can add as many friends as you want.
         <img src={friends} className="friends" />
         <br />
         &ensp; You can always review the list of friends you have, add new ones,
@@ -45,7 +44,7 @@ function Info() {
       <a href="https://www.linkedin.com/in/pashatay/" className="builtby">
         buit by Pasha Tay
       </a>
-    </div>
+    </section>
   );
 }
 
