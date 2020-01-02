@@ -1,0 +1,1407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering tests About renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section>
+        <p
+          class="app-info"
+        >
+          <img
+            class="hug"
+            src="hug.png"
+          />
+            Isn’t it lovely when someone calls you bestie?! I wouldn’t know because I’ve never been called so but, I’d imagine it feels like a warm hug.
+          <br />
+          <br />
+            What does it take to be the best bestie? It takes hard work and a good memory. Good memory? You ask. Yes. The greatest test to take you from basic to bestie is remembering your significant bestie’s birthday. It’s that simple!
+          <img
+            class="cake"
+            src="cake.png"
+          />
+          <br />
+           Everyone knows it’s a no-no and a deserved permanent dunce cap to forget your friend’s special day.
+          <br />
+          <br />
+           Nowadays, we all have social media. It’s pretty handy when it comes to receiving notifications about your friends’ birthdays. But what if your friend removes that information or worse—they don’t have social media! Don’t fret you silly goose. We got you!
+          <img
+            class="socialmedia"
+            src="socialmedia3.png"
+          />
+          <img
+            class="cake2"
+            src="cake.png"
+          />
+           Bestie app will send you an email reminding you to congratulate your friend on their birthday! All you have to do is add your friend’s information to your account. You can add as many friends as you want.
+          <img
+            class="friends"
+            src="friends.png"
+          />
+          <br />
+            You can always review the list of friends you have, add new ones, or delete fake friends. If you change your email, simply update your account in the app.
+        </p>
+        <a
+          class="builtby"
+          href="https://www.linkedin.com/in/pashatay/"
+        >
+          buit by Pasha Tay
+        </a>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section>
+      <p
+        class="app-info"
+      >
+        <img
+          class="hug"
+          src="hug.png"
+        />
+          Isn’t it lovely when someone calls you bestie?! I wouldn’t know because I’ve never been called so but, I’d imagine it feels like a warm hug.
+        <br />
+        <br />
+          What does it take to be the best bestie? It takes hard work and a good memory. Good memory? You ask. Yes. The greatest test to take you from basic to bestie is remembering your significant bestie’s birthday. It’s that simple!
+        <img
+          class="cake"
+          src="cake.png"
+        />
+        <br />
+         Everyone knows it’s a no-no and a deserved permanent dunce cap to forget your friend’s special day.
+        <br />
+        <br />
+         Nowadays, we all have social media. It’s pretty handy when it comes to receiving notifications about your friends’ birthdays. But what if your friend removes that information or worse—they don’t have social media! Don’t fret you silly goose. We got you!
+        <img
+          class="socialmedia"
+          src="socialmedia3.png"
+        />
+        <img
+          class="cake2"
+          src="cake.png"
+        />
+         Bestie app will send you an email reminding you to congratulate your friend on their birthday! All you have to do is add your friend’s information to your account. You can add as many friends as you want.
+        <img
+          class="friends"
+          src="friends.png"
+        />
+        <br />
+          You can always review the list of friends you have, add new ones, or delete fake friends. If you change your email, simply update your account in the app.
+      </p>
+      <a
+        class="builtby"
+        href="https://www.linkedin.com/in/pashatay/"
+      >
+        buit by Pasha Tay
+      </a>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests AddFriend renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="add-new-friend"
+      >
+        <form
+          class="add-new-friend-form"
+        >
+          <h1
+            class="add-new-friend-title"
+          >
+            Add a new Bestie
+          </h1>
+          <input
+            name="first_name"
+            placeholder="First Name"
+            required=""
+            type="text"
+          />
+          <input
+            name="last_name"
+            placeholder="Last Name"
+            required=""
+            type="text"
+          />
+          <input
+            name="relationship"
+            placeholder="relationship"
+            required=""
+            type="text"
+          />
+          <input
+            max="2020-01-02"
+            min="1900-01-01"
+            name="dob"
+            placeholder="Date of Birth"
+            required=""
+            type="date"
+          />
+          <input
+            class="button"
+            type="submit"
+            value="Add Friend"
+          />
+        </form>
+        <img
+          class="addfriend-img"
+          src="pig.png"
+        />
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="add-new-friend"
+    >
+      <form
+        class="add-new-friend-form"
+      >
+        <h1
+          class="add-new-friend-title"
+        >
+          Add a new Bestie
+        </h1>
+        <input
+          name="first_name"
+          placeholder="First Name"
+          required=""
+          type="text"
+        />
+        <input
+          name="last_name"
+          placeholder="Last Name"
+          required=""
+          type="text"
+        />
+        <input
+          name="relationship"
+          placeholder="relationship"
+          required=""
+          type="text"
+        />
+        <input
+          max="2020-01-02"
+          min="1900-01-01"
+          name="dob"
+          placeholder="Date of Birth"
+          required=""
+          type="date"
+        />
+        <input
+          class="button"
+          type="submit"
+          value="Add Friend"
+        />
+      </form>
+      <img
+        class="addfriend-img"
+        src="pig.png"
+      />
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests App renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <header
+          class="header"
+        >
+          <a
+            class="header-bestie"
+            href="/"
+          >
+            <h2>
+              Best!e
+            </h2>
+          </a>
+          <div>
+            <a
+              class="header-logLinks"
+              href="/login"
+            >
+              <h2>
+                Login
+              </h2>
+            </a>
+            <a
+              class="header-logLinks"
+              href="/signup"
+            >
+              <h2>
+                SignUp
+              </h2>
+            </a>
+          </div>
+        </header>
+        <section>
+          <p
+            class="app-info"
+          >
+            <img
+              class="hug"
+              src="hug.png"
+            />
+              Isn’t it lovely when someone calls you bestie?! I wouldn’t know because I’ve never been called so but, I’d imagine it feels like a warm hug.
+            <br />
+            <br />
+              What does it take to be the best bestie? It takes hard work and a good memory. Good memory? You ask. Yes. The greatest test to take you from basic to bestie is remembering your significant bestie’s birthday. It’s that simple!
+            <img
+              class="cake"
+              src="cake.png"
+            />
+            <br />
+             Everyone knows it’s a no-no and a deserved permanent dunce cap to forget your friend’s special day.
+            <br />
+            <br />
+             Nowadays, we all have social media. It’s pretty handy when it comes to receiving notifications about your friends’ birthdays. But what if your friend removes that information or worse—they don’t have social media! Don’t fret you silly goose. We got you!
+            <img
+              class="socialmedia"
+              src="socialmedia3.png"
+            />
+            <img
+              class="cake2"
+              src="cake.png"
+            />
+             Bestie app will send you an email reminding you to congratulate your friend on their birthday! All you have to do is add your friend’s information to your account. You can add as many friends as you want.
+            <img
+              class="friends"
+              src="friends.png"
+            />
+            <br />
+              You can always review the list of friends you have, add new ones, or delete fake friends. If you change your email, simply update your account in the app.
+          </p>
+          <a
+            class="builtby"
+            href="https://www.linkedin.com/in/pashatay/"
+          >
+            buit by Pasha Tay
+          </a>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <header
+        class="header"
+      >
+        <a
+          class="header-bestie"
+          href="/"
+        >
+          <h2>
+            Best!e
+          </h2>
+        </a>
+        <div>
+          <a
+            class="header-logLinks"
+            href="/login"
+          >
+            <h2>
+              Login
+            </h2>
+          </a>
+          <a
+            class="header-logLinks"
+            href="/signup"
+          >
+            <h2>
+              SignUp
+            </h2>
+          </a>
+        </div>
+      </header>
+      <section>
+        <p
+          class="app-info"
+        >
+          <img
+            class="hug"
+            src="hug.png"
+          />
+            Isn’t it lovely when someone calls you bestie?! I wouldn’t know because I’ve never been called so but, I’d imagine it feels like a warm hug.
+          <br />
+          <br />
+            What does it take to be the best bestie? It takes hard work and a good memory. Good memory? You ask. Yes. The greatest test to take you from basic to bestie is remembering your significant bestie’s birthday. It’s that simple!
+          <img
+            class="cake"
+            src="cake.png"
+          />
+          <br />
+           Everyone knows it’s a no-no and a deserved permanent dunce cap to forget your friend’s special day.
+          <br />
+          <br />
+           Nowadays, we all have social media. It’s pretty handy when it comes to receiving notifications about your friends’ birthdays. But what if your friend removes that information or worse—they don’t have social media! Don’t fret you silly goose. We got you!
+          <img
+            class="socialmedia"
+            src="socialmedia3.png"
+          />
+          <img
+            class="cake2"
+            src="cake.png"
+          />
+           Bestie app will send you an email reminding you to congratulate your friend on their birthday! All you have to do is add your friend’s information to your account. You can add as many friends as you want.
+          <img
+            class="friends"
+            src="friends.png"
+          />
+          <br />
+            You can always review the list of friends you have, add new ones, or delete fake friends. If you change your email, simply update your account in the app.
+        </p>
+        <a
+          class="builtby"
+          href="https://www.linkedin.com/in/pashatay/"
+        >
+          buit by Pasha Tay
+        </a>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests DeleteUser renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="delete-section"
+      >
+        <div>
+          <p
+            class="delete-info"
+          >
+            Are you sure you want to delete your page? If you press yes all your information will be erased permanently.
+          </p>
+          <button
+            class="delete-info-button"
+          >
+            Yes
+          </button>
+          <a
+            href="/"
+          >
+            <button
+              class="delete-info-button"
+            >
+              No
+            </button>
+          </a>
+        </div>
+        <img
+          class="delete-img"
+          src="delete.png"
+        />
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="delete-section"
+    >
+      <div>
+        <p
+          class="delete-info"
+        >
+          Are you sure you want to delete your page? If you press yes all your information will be erased permanently.
+        </p>
+        <button
+          class="delete-info-button"
+        >
+          Yes
+        </button>
+        <a
+          href="/"
+        >
+          <button
+            class="delete-info-button"
+          >
+            No
+          </button>
+        </a>
+      </div>
+      <img
+        class="delete-img"
+        src="delete.png"
+      />
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests EditUser renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="edit-form"
+      >
+        <form>
+          <input
+            name="email"
+            placeholder="email"
+            required=""
+            type="email"
+          />
+          <input
+            class="button"
+            type="submit"
+            value="Change Email"
+          />
+        </form>
+        <br />
+        <h4
+          class="error"
+        />
+        <form>
+          <input
+            name="password"
+            placeholder="password"
+            required=""
+            type="password"
+          />
+          <input
+            placeholder="password"
+            required=""
+            type="password"
+          />
+          <br />
+          <input
+            class="button"
+            type="submit"
+            value="Change Password"
+          />
+        </form>
+      </section>
+      <img
+        class="edit-img"
+        src="pencil.png"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="edit-form"
+    >
+      <form>
+        <input
+          name="email"
+          placeholder="email"
+          required=""
+          type="email"
+        />
+        <input
+          class="button"
+          type="submit"
+          value="Change Email"
+        />
+      </form>
+      <br />
+      <h4
+        class="error"
+      />
+      <form>
+        <input
+          name="password"
+          placeholder="password"
+          required=""
+          type="password"
+        />
+        <input
+          placeholder="password"
+          required=""
+          type="password"
+        />
+        <br />
+        <input
+          class="button"
+          type="submit"
+          value="Change Password"
+        />
+      </form>
+    </section>
+    <img
+      class="edit-img"
+      src="pencil.png"
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests Header renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <header
+        class="header"
+      >
+        <a
+          class="header-bestie"
+          href="/"
+        >
+          <h2>
+            Best!e
+          </h2>
+        </a>
+        <div>
+          <a
+            class="header-logLinks"
+            href="/login"
+          >
+            <h2>
+              Login
+            </h2>
+          </a>
+          <a
+            class="header-logLinks"
+            href="/signup"
+          >
+            <h2>
+              SignUp
+            </h2>
+          </a>
+        </div>
+      </header>
+    </div>
+  </body>,
+  "container": <div>
+    <header
+      class="header"
+    >
+      <a
+        class="header-bestie"
+        href="/"
+      >
+        <h2>
+          Best!e
+        </h2>
+      </a>
+      <div>
+        <a
+          class="header-logLinks"
+          href="/login"
+        >
+          <h2>
+            Login
+          </h2>
+        </a>
+        <a
+          class="header-logLinks"
+          href="/signup"
+        >
+          <h2>
+            SignUp
+          </h2>
+        </a>
+      </div>
+    </header>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests Info renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section>
+        <p
+          class="app-info"
+        >
+          <img
+            class="hug"
+            src="hug.png"
+          />
+            Isn’t it lovely when someone calls you bestie?! I wouldn’t know because I’ve never been called so but, I’d imagine it feels like a warm hug.
+          <br />
+          <br />
+            What does it take to be the best bestie? It takes hard work and a good memory. Good memory? You ask. Yes. The greatest test to take you from basic to bestie is remembering your significant bestie’s birthday. It’s that simple!
+          <img
+            class="cake"
+            src="cake.png"
+          />
+          <br />
+           Everyone knows it’s a no-no and a deserved permanent dunce cap to forget your friend’s special day.
+          <br />
+          <br />
+           Nowadays, we all have social media. It’s pretty handy when it comes to receiving notifications about your friends’ birthdays. But what if your friend removes that information or worse—they don’t have social media! Don’t fret you silly goose. We got you!
+          <img
+            class="socialmedia"
+            src="socialmedia3.png"
+          />
+          <img
+            class="cake2"
+            src="cake.png"
+          />
+           Bestie app will send you an email reminding you to congratulate your friend on their birthday! All you have to do is add your friend’s information to your account. You can add as many friends as you want.
+          <img
+            class="friends"
+            src="friends.png"
+          />
+          <br />
+            You can always review the list of friends you have, add new ones, or delete fake friends. If you change your email, simply update your account in the app.
+        </p>
+        <a
+          class="builtby"
+          href="https://www.linkedin.com/in/pashatay/"
+        >
+          buit by Pasha Tay
+        </a>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section>
+      <p
+        class="app-info"
+      >
+        <img
+          class="hug"
+          src="hug.png"
+        />
+          Isn’t it lovely when someone calls you bestie?! I wouldn’t know because I’ve never been called so but, I’d imagine it feels like a warm hug.
+        <br />
+        <br />
+          What does it take to be the best bestie? It takes hard work and a good memory. Good memory? You ask. Yes. The greatest test to take you from basic to bestie is remembering your significant bestie’s birthday. It’s that simple!
+        <img
+          class="cake"
+          src="cake.png"
+        />
+        <br />
+         Everyone knows it’s a no-no and a deserved permanent dunce cap to forget your friend’s special day.
+        <br />
+        <br />
+         Nowadays, we all have social media. It’s pretty handy when it comes to receiving notifications about your friends’ birthdays. But what if your friend removes that information or worse—they don’t have social media! Don’t fret you silly goose. We got you!
+        <img
+          class="socialmedia"
+          src="socialmedia3.png"
+        />
+        <img
+          class="cake2"
+          src="cake.png"
+        />
+         Bestie app will send you an email reminding you to congratulate your friend on their birthday! All you have to do is add your friend’s information to your account. You can add as many friends as you want.
+        <img
+          class="friends"
+          src="friends.png"
+        />
+        <br />
+          You can always review the list of friends you have, add new ones, or delete fake friends. If you change your email, simply update your account in the app.
+      </p>
+      <a
+        class="builtby"
+        href="https://www.linkedin.com/in/pashatay/"
+      >
+        buit by Pasha Tay
+      </a>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests LogOut renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div />
+  </body>,
+  "container": <div />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests Login renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="login-form"
+      >
+        <form>
+          <input
+            name="email"
+            placeholder="email"
+            required=""
+            type="text"
+          />
+          <input
+            name="password"
+            placeholder="password"
+            required=""
+            type="password"
+          />
+          <input
+            class="button"
+            type="submit"
+            value="Log In"
+          />
+        </form>
+        <h4
+          class="error"
+        />
+        <img
+          class="login-img"
+          src="login.png"
+        />
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="login-form"
+    >
+      <form>
+        <input
+          name="email"
+          placeholder="email"
+          required=""
+          type="text"
+        />
+        <input
+          name="password"
+          placeholder="password"
+          required=""
+          type="password"
+        />
+        <input
+          class="button"
+          type="submit"
+          value="Log In"
+        />
+      </form>
+      <h4
+        class="error"
+      />
+      <img
+        class="login-img"
+        src="login.png"
+      />
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Rendering tests Signup renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="signup-form"
+      >
+        <form>
+          <input
+            name="name"
+            placeholder="name"
+            required=""
+            type="text"
+          />
+          <input
+            name="email"
+            placeholder="email"
+            required=""
+            type="email"
+          />
+          <input
+            name="password"
+            placeholder="password"
+            required=""
+            type="password"
+          />
+          <input
+            placeholder="password"
+            required=""
+            type="password"
+          />
+          <br />
+          <input
+            class="button"
+            type="submit"
+            value="Sign Up"
+          />
+        </form>
+        <h4
+          class="error"
+        />
+        <img
+          class="signup-img"
+          src="signup.png"
+        />
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="signup-form"
+    >
+      <form>
+        <input
+          name="name"
+          placeholder="name"
+          required=""
+          type="text"
+        />
+        <input
+          name="email"
+          placeholder="email"
+          required=""
+          type="email"
+        />
+        <input
+          name="password"
+          placeholder="password"
+          required=""
+          type="password"
+        />
+        <input
+          placeholder="password"
+          required=""
+          type="password"
+        />
+        <br />
+        <input
+          class="button"
+          type="submit"
+          value="Sign Up"
+        />
+      </form>
+      <h4
+        class="error"
+      />
+      <img
+        class="signup-img"
+        src="signup.png"
+      />
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

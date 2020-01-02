@@ -4,15 +4,10 @@ import { Link } from "react-router-dom";
 import DisplayFriend from "./DisplayFriend";
 
 function UserPage() {
-  const {
-    userData,
-    getDataForUserMainPage,
-    redirectTask,
-    setRedirectTask
-  } = useContext(Context);
+  const { userData, getDataForUserMainPage, setRedirectTask } = useContext(
+    Context
+  );
 
-  console.log(userData);
-  console.log(redirectTask);
   useEffect(() => {
     getDataForUserMainPage();
     setRedirectTask(false);
