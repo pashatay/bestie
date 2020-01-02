@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../Context";
 import axios from "axios";
+import moment from "moment";
 
 import pig from "../images/pig.png";
 
@@ -71,6 +72,8 @@ function AddFriend() {
         <input
           required
           type="date"
+          min="1900-01-01"
+          max={moment().format("YYYY-MM-DD")}
           placeholder="Date of Birth"
           name={"dob"}
           onChange={handleChange}

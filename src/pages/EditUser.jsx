@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 
 import pencil from "../images/pencil.png";
@@ -6,11 +6,16 @@ import pencil from "../images/pencil.png";
 function EditUser() {
   const {
     anError,
+    setAnError,
     handleChange,
     handleSubmitChangeEmail,
     handleSubmitChangePassword,
     setConfirmedPassword
   } = useContext(Context);
+
+  useEffect(() => {
+    setAnError("");
+  }, []);
 
   return (
     <>
@@ -25,8 +30,6 @@ function EditUser() {
           />
           <input type="submit" className="button" value="Change Email"></input>
         </form>
-        <br />
-
         <br />
         <h4 className="error">{anError}</h4>
         <form onSubmit={handleSubmitChangePassword}>

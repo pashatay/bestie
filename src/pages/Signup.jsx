@@ -16,7 +16,7 @@ function Signup() {
     setAnError("");
   }, []);
   return (
-    <div className="signup-form">
+    <section className="signup-form">
       <form onSubmit={handleSubmitSignUp}>
         <input
           required
@@ -53,7 +53,7 @@ function Signup() {
       </form>
       <h4 className="error">{anError}</h4>
       <img src={signupImg} className="signup-img" />
-    </div>
+    </section>
   );
 }
 
