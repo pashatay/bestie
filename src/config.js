@@ -1,3 +1,3 @@
 export default {
-  API_ENDPOINT: "https://fierce-hamlet-53635.herokuapp.com"
+  API_ENDPOINT: "https://bestie-server.herokuapp.com/"
 };
