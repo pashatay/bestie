@@ -9,7 +9,6 @@ body {
   background: #f5dae8;
   color: #5d6873;
   -webkit-appearance: none;
-  border-radius: 0;
 }
 
 code {
@@ -96,7 +95,6 @@ button {
 }
 input {
   -webkit-appearance: none;
-  border-radius: 0;
   height: 55px;
   width: 70%;
   font-size: 1.2em;
@@ -108,7 +106,8 @@ input {
 }
 input[type="submit"] {
   -webkit-appearance: none;
-  border-radius: 0;
+  -moz-appearance: none;
+  appearance: none;
   margin-top: 5%;
   height: 55px;
   width: 70%;
