@@ -131,6 +131,7 @@ input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 70%;
   margin-top: 5%;
   background: rgb(196, 219, 242);
   border: none;
