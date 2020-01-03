@@ -95,6 +95,8 @@ button {
 }
 input {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   height: 55px;
   width: 70%;
   font-size: 1.2em;
