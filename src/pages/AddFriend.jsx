@@ -69,13 +69,13 @@ function AddFriend() {
           name={"relationship"}
           onChange={handleChange}
         />
-
         <input
           required
           type="date"
           min="1900-01-01"
-          max={moment().format("YYYY-MM-DD")}
-          placeholder="1992-08-22"
+          max={moment()
+            .subtract(1, "day")
+            .format("YYYY-MM-DD")}
           name={"dob"}
           onChange={handleChange}
         />
