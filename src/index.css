@@ -1,8 +1,3 @@
-* {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -78,6 +73,9 @@ button:focus {
 button {
   color: #6a6e92;
   font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .signup-form {
   width: 100vw;
@@ -141,6 +139,9 @@ input[type="submit"] {
 
 .button:hover {
   background: #b9bf88;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .error {
