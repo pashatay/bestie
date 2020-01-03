@@ -41,7 +41,6 @@ function ContextProvider(props) {
           );
         })
         .catch(err => {
-          console.log({ err });
           setAnError(err.response.data.error.message);
         });
     } else {
@@ -60,7 +59,6 @@ function ContextProvider(props) {
       })
       .catch(err => {
         setRedirectTask(false);
-        console.log({ err });
         setAnError(err.response.data.error.message);
       });
   };
@@ -95,7 +93,6 @@ function ContextProvider(props) {
       })
       .then(setFormValues(formDefaultValues))
       .catch(err => {
-        console.log(err.response.data.error.message);
         setAnError(err.response.data.error.message);
       });
   };
@@ -114,7 +111,6 @@ function ContextProvider(props) {
         })
         .then(setFormValues(formDefaultValues))
         .catch(err => {
-          console.log({ err });
           setAnError(err.response.data.error.message || "error");
         });
     }
