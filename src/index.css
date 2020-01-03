@@ -129,7 +129,6 @@ input[type="submit"] {
   -moz-appearance: none;
   appearance: none;
   margin-top: 5%;
-  height: 55px;
   background: rgb(196, 219, 242);
   border: none;
   box-shadow: 0px 8px 5px rgba(102, 102, 102, 0.1);
