@@ -126,12 +126,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
 }
 input[type="submit"] {
+  height: 55px;
+  width: 70%;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: rgb(196, 219, 242);
   color: #6a6e92;
   font-weight: bold;
-  width: 72%;
 }
 
 .button:hover {
