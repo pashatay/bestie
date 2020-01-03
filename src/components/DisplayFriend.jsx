@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../Context";
 import moment from "moment";
 import axios from "axios";
+import config from "../config";
 
 function DisplayFriend(data) {
   const {
@@ -34,7 +35,7 @@ function DisplayFriend(data) {
   const handleDeleteFriend = e => {
     e.preventDefault();
     axios
-      .delete(`http://localhost:8000/usersfriend/${friendId}`, { headers })
+      .delete(`${config.API_ENDPOINT}/usersfriend/${friendId}`, { headers })
       .then(setRedirectTask(true))
       .catch(err => {
         console.log(err);

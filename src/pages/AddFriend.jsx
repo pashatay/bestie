@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../Context";
+import config from "../config";
 import axios from "axios";
 import moment from "moment";
 
@@ -32,7 +33,7 @@ function AddFriend() {
   const handleSubmitAddFriend = e => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/addfriend", newFriend, { headers })
+      .post(`${config.API_ENDPOINT}/addfriend`, newFriend, { headers })
       .then(getDataForUserMainPage())
       .then(setRedirectTask(true))
       .catch(err => {

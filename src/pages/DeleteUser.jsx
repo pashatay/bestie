@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../Context";
 import { Link } from "react-router-dom";
+import config from "../config";
 import axios from "axios";
 
 import deleteImg from "../images/delete.png";
@@ -16,7 +17,7 @@ function DeleteUser() {
   const handleDeleteAccount = e => {
     e.preventDefault();
     axios
-      .delete("http://localhost:8000/mainpage", { headers })
+      .delete(`${config.API_ENDPOINT}/mainpage`, { headers })
       .then(setUserHasLoggedIn(false))
       .then(setRedirectTask(true))
       .catch(err => {

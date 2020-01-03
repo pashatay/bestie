@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
+import config from "./config";
+
 const Context = React.createContext();
 
 function ContextProvider(props) {
@@ -33,7 +35,7 @@ function ContextProvider(props) {
     e.preventDefault();
     if (formValues.password === confirmedPassword) {
       axios
-        .post("http://localhost:8000/signup", formValues)
+        .post(`${config.API_ENDPOINT}/signup`, formValues)
         .then(res => {
           console.log(res);
           setAnError(
@@ -51,7 +53,7 @@ function ContextProvider(props) {
   const handleSubmitLogin = e => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/login", formValues)
+      .post(`${config.API_ENDPOINT}/login`, formValues)
       .then(res => {
         userLoggedIn(res.data);
         setRedirectTask(true);
@@ -70,7 +72,7 @@ function ContextProvider(props) {
 
   const getDataForUserMainPage = () => {
     axios
-      .get("http://localhost:8000/mainpage", { headers })
+      .get(`${config.API_ENDPOINT}/mainpage`, { headers })
       .then(res => {
         setUserData(res.data);
       })
@@ -86,7 +88,7 @@ function ContextProvider(props) {
     formValues.password = "";
     e.preventDefault();
     axios
-      .post("http://localhost:8000/mainpage", formValues, { headers })
+      .post(`${config.API_ENDPOINT}/mainpage`, formValues, { headers })
       .then(res => {
         setAnError(res.data.message.message);
         setUserHasLoggedIn(false);
@@ -104,7 +106,7 @@ function ContextProvider(props) {
     } else {
       e.preventDefault();
       axios
-        .post("http://localhost:8000/mainpage", formValues, { headers })
+        .post(`${config.API_ENDPOINT}/mainpage`, formValues, { headers })
         .then(setUserHasLoggedIn(false))
         .then(res => {
           setAnError(res.data.message.message);
