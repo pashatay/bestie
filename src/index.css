@@ -122,15 +122,7 @@ input[type="date"] {
   background-position: right 1em top 50%, 0 0;
   background-size: 1.1em auto, 100%;
 }
-::-webkit-datetime-edit-month-field {
-  text-transform: uppercase;
-}
-::-webkit-datetime-edit-day-field {
-  text-transform: uppercase;
-}
-::-webkit-datetime-edit-year-field {
-  text-transform: uppercase;
-}
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
@@ -141,6 +133,7 @@ input[type="submit"] {
   -moz-appearance: none;
   appearance: none;
   width: 70%;
+  height: 55px;
   margin-top: 5%;
   background: rgb(196, 219, 242);
   border: none;
