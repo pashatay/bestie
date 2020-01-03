@@ -75,8 +75,7 @@ function AddFriend() {
           type="date"
           min="1900-01-01"
           max={moment().format("YYYY-MM-DD")}
-          value="1992-08-22"
-          placeholder="Date of Birth"
+          placeholder="1992-08-22"
           name={"dob"}
           onChange={handleChange}
         />
