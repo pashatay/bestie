@@ -45,7 +45,7 @@ function AddFriend() {
     <section className="add-new-friend">
       {redirectToMainPage()}
       <form onSubmit={handleSubmitAddFriend} className="add-new-friend-form">
-        <h1 className="add-new-friend-title">Add a new Bestie</h1>
+        <h1 className="add-new-friend-title">Add your Bestie's Bday</h1>
         <input
           required
           type="text"
