@@ -72,9 +72,6 @@ button:focus {
 button {
   color: #6a6e92;
   font-weight: bold;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 .signup-form {
   width: 100vw;
@@ -134,6 +131,7 @@ input[type="submit"] {
   background: rgb(196, 219, 242);
   color: #6a6e92;
   font-weight: bold;
+  width: 80%;
 }
 
 .button:hover {
