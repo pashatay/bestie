@@ -42,7 +42,7 @@ function Info() {
       </p>
 
       <a href="https://www.linkedin.com/in/pashatay/" className="builtby">
-        buit by Pasha Tay
+        built by Pasha Tay
       </a>
     </section>
   );
