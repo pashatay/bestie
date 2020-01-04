@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bestie
 
-## Available Scripts
+_Bestie_ is an app which can send you email reminders about your friends birtdays.
 
-In the project directory, you can run:
+It works well on any device. The style of the app is a result of my insperation by birthday cakes and sweets.
+![app image](src/images/readme-images/demo-devices.png)
+In order to start using **the Best!e App** you need to sign up for an account first.
+As soon as you sign up, the App will email you a verification link.
+![app image](src/images/readme-images/demo-verification.png)
+Click the link and you're all set! Now, you can start using the app.
+After login, you will be redirected to your main page, where you can find "add-friend" button.  
+Go ahead and add your first friends info:
 
-### `npm start`
+- First name;
+- Last name:
+- Relationship:
+- and the date of birth of course!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![app image](src/images/readme-images/demo-addfriend.png)
+To get back to your page click on **Best!e** logo. Each friend of yours will get its own circle. If you want to delete a friend tap on the circle and click delete (if you're using mobile device) or hover over a friend and click delete (from laptop).
+![app image](src/images/readme-images/demo-mainpage.png)
+When one of your friends will have a _birthday_, Bestie will send you an email reminder.
+![app image](src/images/readme-images/demo-reminder.png)
+Make sure, you will keep **Bestie** updated if your email change!
+You can update your email or password by clicking on "edit account" button from the main page.
+![app image](src/images/readme-images/demo-edit.png)
+For each email update **Bestie** will email you a verification link to make sure we got it right. So, you wont miss any birthday reminders!
+![app image](src/images/readme-images/demo-verification2.png)
+If you will ever feel _dramatic_ and would like to delete your account, you can do so by cllicking "delete account" button from the main page.
+![app image](src/images/readme-images/demo-delete.png)
+Before deleting your info **Bestie** would like to be sure you thought twice.
+If you will press **"Yes"**, your data will be erased permanetly.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Got excited to start using the app already? Here is a [live page](https://bestie.now.sh/).
