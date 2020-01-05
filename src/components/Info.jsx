@@ -38,8 +38,8 @@ function Info() {
         information to your account.
         <br />
         <br />
-        &ensp;Let's take a a quick tour. I want to show you everything. Click
-        the arrow.
+        &ensp;Let's take a quick tour. I want to show you everything. Click the
+        arrow.
         <br />
         <br />
         <Link to="/tour">
