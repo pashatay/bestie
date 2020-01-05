@@ -9,9 +9,9 @@ In order to start using **the Bestie App** you need to sign up for an account fi
 Click the link and you're all set! Now you can start using the app. After you login, you will be redirected to the main page where you can find the **"add friend"** button.
 Go ahead and add your friend’s info:
 
-- First name;
-- Last name:
-- Relationship:
+- First name
+- Last name
+- Relationship
 - and the date of birth of course!
 
 ![app image](src/images/readme-images/demo-addfriend.png)

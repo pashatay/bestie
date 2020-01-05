@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import hug from "../images/hug.png";
 import cake from "../images/cake.png";
 import socialmedia from "../images/socialmedia3.png";
 import friends from "../images/friends.png";
+import arrow from "../images/arrow.png";
 
 function Info() {
   return (
@@ -33,12 +35,16 @@ function Info() {
         <img src={cake} className="cake2" />
         &ensp;Bestie app will send you an email reminding you to congratulate
         your friend on their birthday! All you have to do is add your friend’s
-        information to your account. You can add as many friends as you want.
-        <img src={friends} className="friends" />
+        information to your account.
         <br />
-        &ensp; You can always review the list of friends you have, add new ones,
-        or delete fake friends. If you change your email, simply update your
-        account in the app.
+        <br />
+        &ensp;Let's take a a quick tour. I want to show you everything. Click
+        the arrow.
+        <br />
+        <br />
+        <Link to="/tour">
+          <img src={arrow} className="arrow" />
+        </Link>
       </p>
 
       <a href="https://www.linkedin.com/in/pashatay/" className="builtby">

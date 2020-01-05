@@ -5,6 +5,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import About from "./pages/About";
+import Tour from "./pages/Tour";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import AddFriend from "./pages/AddFriend";
@@ -19,6 +20,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <About />
+        </Route>
+        <Route path="/tour">
+          <Tour />
         </Route>
         <Route path="/login">
           <Login />
