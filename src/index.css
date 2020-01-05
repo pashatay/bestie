@@ -255,7 +255,7 @@ img {
   margin: auto;
 }
 .demo-image {
-  width: 330px;
+  width: 90vw;
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -302,9 +302,7 @@ img {
   .add-friend-demo-button {
     margin-top: 5%;
   }
-  .demo-image {
-    width: 250px;
-  }
+
   .login-form {
     padding-top: 10%;
     font-size: 1em;
@@ -372,7 +370,7 @@ img {
 }
 
 /* tablets & laptops */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .header-logLinks {
     width: 120px;
     justify-content: center;
@@ -405,7 +403,7 @@ img {
   }
 
   .app-tour {
-    width: 60%;
+    width: 65%;
     margin: auto;
     font-size: 1.7em;
   }
@@ -422,7 +420,7 @@ img {
     margin: auto;
   }
   .demo-image {
-    width: 700px;
+    width: 65vw;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
