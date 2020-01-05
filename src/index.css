@@ -425,6 +425,7 @@ img {
     font-size: 2em;
   }
   .app-info-div {
+    height: 100%;
     display: flex;
     flex-direction: row;
   }
@@ -437,6 +438,7 @@ img {
 
   .hug {
     width: 25vw;
+    height: 100%;
   }
 
   .app-tour {
