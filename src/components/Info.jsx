@@ -10,11 +10,11 @@ function Info() {
       <div className="app-info-div">
         <img src={hug} className="hug" />
         <p className="app-info">
-          &ensp;Bestie App will remind you about your friends' birthdays!
+          Bestie App will remind you about your friends' birthdays!
           <br />
           <br />
-          &ensp;Let's take a quick tour. I want to show you everything. Click
-          the arrow.
+          Let's take a quick tour. I want to show you everything. Click the
+          arrow.
         </p>
       </div>
       <Link to="/tour">
