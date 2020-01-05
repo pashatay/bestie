@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 
 import signupImg from "../images/signup.png";
+import cake from "../images/cake.png";
 
 function Signup() {
   const {
@@ -11,14 +12,24 @@ function Signup() {
     setAMessage,
     handleChange,
     handleSubmitSignUp,
-    setConfirmedPassword
+    setConfirmedPassword,
+    wasAbleToSignUp,
+    setWasAbleToSignUp
   } = useContext(Context);
 
   useEffect(() => {
     setAnError("");
     setAMessage("");
+    setWasAbleToSignUp(false);
   }, []);
-  return (
+
+  const message = (
+    <>
+      <h4 className="message">{aMessage}</h4>{" "}
+      <img src={cake} className="signup-img-cake" />
+    </>
+  );
+  const signForm = (
     <section className="signup-form">
       <form onSubmit={handleSubmitSignUp}>
         <input
@@ -28,7 +39,6 @@ function Signup() {
           name={"name"}
           onChange={handleChange}
         />
-
         <input
           required
           type="email"
@@ -36,7 +46,6 @@ function Signup() {
           name={"email"}
           onChange={handleChange}
         />
-
         <input
           required
           type="password"
@@ -44,7 +53,6 @@ function Signup() {
           name={"password"}
           onChange={handleChange}
         />
-
         <input
           required
           type="password"
@@ -55,10 +63,10 @@ function Signup() {
         <input type="submit" className="button" value="Sign Up"></input>
       </form>
       <h4 className="error">{anError}</h4>
-      <h4 className="message">{aMessage}</h4>
       <img src={signupImg} className="signup-img" />
     </section>
   );
+  return <> {wasAbleToSignUp ? message : signForm}</>;
 }
 
 export default Signup;

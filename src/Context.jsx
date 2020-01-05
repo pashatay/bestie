@@ -19,6 +19,7 @@ function ContextProvider(props) {
   const [aMessage, setAMessage] = useState("");
   const [userData, setUserData] = useState([]);
   const [redirectTask, setRedirectTask] = useState(false);
+  const [wasAbleToSignUp, setWasAbleToSignUp] = useState(false);
 
   const headers = {
     Authorization: localStorage.getItem("access_token")
@@ -38,6 +39,7 @@ function ContextProvider(props) {
       axios
         .post(`${config.API_ENDPOINT}/signup`, formValues)
         .then(res => {
+          setWasAbleToSignUp(true);
           setAMessage(
             "Almost done! Please check your email for the link to verify your account."
           );
@@ -152,7 +154,9 @@ function ContextProvider(props) {
         handleSubmitChangeEmail,
         handleSubmitChangePassword,
         aMessage,
-        setAMessage
+        setAMessage,
+        wasAbleToSignUp,
+        setWasAbleToSignUp
       }}
     >
       {props.children}

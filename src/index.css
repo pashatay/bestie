@@ -84,6 +84,9 @@ button {
   margin-top: 0%;
   width: 350px;
 }
+.signup-img-cake {
+  width: 350px;
+}
 .login-form {
   width: 100vw;
   margin: auto;
@@ -145,6 +148,8 @@ input[type="submit"] {
 }
 .message {
   color: #4d9244;
+  font-size: 1.6em;
+  margin-top: 25%;
 }
 .error {
   color: rgb(184, 83, 83);
@@ -313,8 +318,14 @@ img {
 
 /* small phones */
 @media only screen and (max-height: 640px) {
+  .message {
+    font-size: 1.4em;
+  }
   img {
     width: 130px;
+  }
+  .signup-img-cake {
+    width: 250px;
   }
   .app-info {
     font-size: 1em;
@@ -456,6 +467,7 @@ img {
     margin-top: -8%;
     margin-left: 60%;
   }
+
   .all-besties {
     flex-direction: row;
     flex-wrap: wrap;
@@ -517,6 +529,10 @@ img {
     max-width: 450px;
     margin: auto;
   }
+  .signup-img-cake {
+    margin-top: -3%;
+    width: 550px;
+  }
   .login-img {
     width: 100%;
     height: 100%;
@@ -543,13 +559,16 @@ img {
   .builtby {
     font-size: 1.3em;
   }
-  .error,
-  .message {
+  .error {
     position: fixed;
     bottom: 5%;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
     font-size: 1.2em;
+  }
+  .message {
+    font-size: 2em;
+    margin-top: 10%;
   }
 }
