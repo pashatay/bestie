@@ -37,7 +37,9 @@ code {
 footer a:link,
 footer a:visited,
 .builtby:link,
-.builtby:visited {
+.builtby:visited,
+.signup-tourpage:link,
+.signup-tourpage:visited {
   text-decoration: none;
   color: #6a6e92;
 }
@@ -218,10 +220,12 @@ footer {
   flex-wrap: wrap;
   text-align: justify;
   padding: 3%;
+  margin-top: 5%;
 }
 img {
   width: 200px;
   margin: auto;
+  margin-top: 5%;
 }
 
 .arrow {
@@ -264,6 +268,9 @@ img {
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+.signup-tourpage {
+  font-weight: bold;
 }
 .edit-form {
   margin-top: 5%;

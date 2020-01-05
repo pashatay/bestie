@@ -7,8 +7,8 @@ import arrow from "../images/arrow.png";
 function Info() {
   return (
     <section>
+      <img src={hug} className="hug" />
       <p className="app-info">
-        <img src={hug} className="hug" />
         &ensp;Bestie App will send you an email reminding you to congratulate
         your friend on their birthday!
         <br />

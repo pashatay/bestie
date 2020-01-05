@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import devices from "../images/readme-images/demo-devices.png";
 import verification from "../images/readme-images/demo-verification.png";
@@ -59,7 +60,12 @@ function Tour() {
         erased permanently.
         <br />
         <br />
-        Excited to start using the app? Click the sign up button.
+        <div>
+          Excited to start using the app? Click the <bt />
+          <Link to="/signup" className="signup-tourpage">
+            signup.
+          </Link>
+        </div>
       </p>
     </section>
   );
