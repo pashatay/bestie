@@ -231,7 +231,6 @@ img {
 .arrow {
   display: block;
   margin: auto;
-  margin-top: -8%;
   width: 100px;
 }
 .builtby {
@@ -313,6 +312,10 @@ img {
   .app-info {
     font-size: 1em;
   }
+  .arrow {
+    margin-top: -5%;
+    width: 80px;
+  }
   .add-friend-demo-button {
     margin-top: 5%;
   }
@@ -356,6 +359,13 @@ img {
 
 /* medium phones */
 @media only screen and (max-height: 740px) and (min-height: 641px) {
+  img {
+    width: 150px;
+  }
+  .arrow {
+    margin-top: -5%;
+    width: 80px;
+  }
   .login-form {
     padding-top: 10%;
     font-size: 1em;
@@ -396,21 +406,25 @@ img {
   .header-bestie {
     font-size: 2em;
   }
-
+  .app-info-div {
+    display: flex;
+    flex-direction: row;
+  }
   .app-info {
     width: 60%;
     margin: auto;
-    font-size: 1.7em;
+    font-size: 2em;
+    text-align: center;
   }
 
   .hug {
-    width: 300px;
+    width: 25vw;
   }
 
   .app-tour {
     width: 65%;
     margin: auto;
-    font-size: 1.7em;
+    font-size: 2em;
   }
   .add-friend-demo-button {
     margin: 5%;
@@ -431,8 +445,9 @@ img {
     margin-bottom: 5%;
   }
   .arrow {
-    width: 300px;
-    margin-top: -4%;
+    width: 250px;
+    margin-top: -8%;
+    margin-left: 60%;
   }
   .all-besties {
     flex-direction: row;
@@ -528,8 +543,5 @@ img {
     right: 0px;
     margin-bottom: 0px;
     font-size: 1.2em;
-  }
-  .builtby {
-    position: relative;
   }
 }

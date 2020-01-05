@@ -7,20 +7,19 @@ import arrow from "../images/arrow.png";
 function Info() {
   return (
     <section>
-      <img src={hug} className="hug" />
-      <p className="app-info">
-        &ensp;Bestie App will send you an email reminding you to congratulate
-        your friend on their birthday!
-        <br />
-        <br />
-        &ensp;Let's take a quick tour. I want to show you everything. Click the
-        arrow.
-        <br />
-        <br />
-        <Link to="/tour">
-          <img src={arrow} className="arrow" />
-        </Link>
-      </p>
+      <div className="app-info-div">
+        <img src={hug} className="hug" />
+        <p className="app-info">
+          &ensp;Bestie App will remind you about your friends' birthdays!
+          <br />
+          <br />
+          &ensp;Let's take a quick tour. I want to show you everything. Click
+          the arrow.
+        </p>
+      </div>
+      <Link to="/tour">
+        <img src={arrow} className="arrow" />
+      </Link>
 
       <a href="https://www.linkedin.com/in/pashatay/" className="builtby">
         built by Pasha Tay
