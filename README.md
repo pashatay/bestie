@@ -12,7 +12,7 @@ Go ahead and add your friend’s info:
 - First name
 - Last name
 - Relationship
-- and the date of birth of course!
+- Date of birth
 
 ![app image](src/images/readme-images/demo-addfriend.png)
 To get back to your page click on **the Bestie logo**. Each of your friends will get their own circle. If you're using a mobile device and you want to delete a friend, tap on the circle and click delete. If you’re using a laptop, hover over a friend and click delete.

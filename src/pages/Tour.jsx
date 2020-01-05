@@ -57,6 +57,9 @@ function Tour() {
         Before deleting your account, "Bestie" will verify this is the correct
         course of action you want to take. If you press "Yes" your data will be
         erased permanently.
+        <br />
+        <br />
+        Excited to start using the app? Click the sign up button.
       </p>
     </section>
   );
