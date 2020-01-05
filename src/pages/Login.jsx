@@ -7,12 +7,15 @@ function Login() {
   const {
     anError,
     setAnError,
+    aMessage,
+    setAMessage,
     handleSubmitLogin,
     handleChange,
     redirectToMainPage
   } = useContext(Context);
 
   useEffect(() => {
+    setAMessage("");
     setAnError("");
   }, []);
 
@@ -38,6 +41,8 @@ function Login() {
         <input type="submit" className="button" value="Log In"></input>
       </form>
       <h4 className="error">{anError}</h4>
+      <h4 className="message">{aMessage}</h4>
+
       <img src={loginImg} className="login-img" />
     </section>
   );

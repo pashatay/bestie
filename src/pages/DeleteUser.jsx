@@ -21,7 +21,7 @@ function DeleteUser() {
       .then(setUserHasLoggedIn(false))
       .then(setRedirectTask(true))
       .catch(err => {
-        console.log(err);
+        //console.log(err);
       });
   };
 

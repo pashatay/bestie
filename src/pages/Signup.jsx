@@ -7,6 +7,8 @@ function Signup() {
   const {
     anError,
     setAnError,
+    aMessage,
+    setAMessage,
     handleChange,
     handleSubmitSignUp,
     setConfirmedPassword
@@ -14,6 +16,7 @@ function Signup() {
 
   useEffect(() => {
     setAnError("");
+    setAMessage("");
   }, []);
   return (
     <section className="signup-form">
@@ -52,6 +55,7 @@ function Signup() {
         <input type="submit" className="button" value="Sign Up"></input>
       </form>
       <h4 className="error">{anError}</h4>
+      <h4 className="message">{aMessage}</h4>
       <img src={signupImg} className="signup-img" />
     </section>
   );

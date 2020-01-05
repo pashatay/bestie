@@ -37,7 +37,7 @@ function AddFriend() {
       .then(getDataForUserMainPage())
       .then(setRedirectTask(true))
       .catch(err => {
-        console.log(err);
+        //console.log(err);
       });
   };
 

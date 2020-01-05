@@ -38,7 +38,7 @@ function DisplayFriend(data) {
       .delete(`${config.API_ENDPOINT}/usersfriend/${friendId}`, { headers })
       .then(setRedirectTask(true))
       .catch(err => {
-        console.log(err);
+        //console.log(err);
       });
   };
 

@@ -138,11 +138,18 @@ input[type="submit"] {
   -moz-appearance: none;
   appearance: none;
 }
-
-.error {
+.error,
+.message {
+  margin: 5%;
   font-size: 1em;
+}
+.message {
+  color: #4d9244;
+}
+.error {
   color: rgb(184, 83, 83);
 }
+
 .all-besties {
   display: flex;
   flex-direction: column;
@@ -536,7 +543,8 @@ img {
   .builtby {
     font-size: 1.3em;
   }
-  .error {
+  .error,
+  .message {
     position: fixed;
     bottom: 5%;
     left: 0px;

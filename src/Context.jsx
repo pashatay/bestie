@@ -16,6 +16,7 @@ function ContextProvider(props) {
   const [confirmedPassword, setConfirmedPassword] = useState("");
   const [userHasLoggedIn, setUserHasLoggedIn] = useState(false);
   const [anError, setAnError] = useState("");
+  const [aMessage, setAMessage] = useState("");
   const [userData, setUserData] = useState([]);
   const [redirectTask, setRedirectTask] = useState(false);
 
@@ -37,16 +38,18 @@ function ContextProvider(props) {
       axios
         .post(`${config.API_ENDPOINT}/signup`, formValues)
         .then(res => {
-          console.log(res);
-          setAnError(
+          setAMessage(
             "Almost done! Please check your email for the link to verify your account."
           );
+          setAnError("");
         })
         .catch(err => {
           setAnError(err.response.data.error.message);
+          setAMessage("");
         });
     } else {
       setAnError("Passwords don't match!");
+      setAMessage("");
     }
   };
 
@@ -61,7 +64,16 @@ function ContextProvider(props) {
       })
       .catch(err => {
         setRedirectTask(false);
-        setAnError(err.response.data.error.message);
+        if (
+          err.response.data.error.message ===
+          "Please verify your account first."
+        ) {
+          setAMessage(err.response.data.error.message);
+          setAnError("");
+        } else {
+          setAnError(err.response.data.error.message);
+          setAMessage("");
+        }
       });
   };
 
@@ -77,7 +89,7 @@ function ContextProvider(props) {
         setUserData(res.data);
       })
       .catch(err => {
-        console.log(err);
+        //console.log(err);
       });
   };
   const redirectToMainPage = () => {
@@ -138,7 +150,9 @@ function ContextProvider(props) {
         userHasLoggedIn,
         setUserHasLoggedIn,
         handleSubmitChangeEmail,
-        handleSubmitChangePassword
+        handleSubmitChangePassword,
+        aMessage,
+        setAMessage
       }}
     >
       {props.children}
