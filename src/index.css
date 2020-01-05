@@ -223,6 +223,7 @@ img {
 .arrow {
   display: block;
   margin: auto;
+  margin-top: -8%;
   width: 100px;
 }
 .builtby {
@@ -428,6 +429,7 @@ img {
   }
   .arrow {
     width: 300px;
+    margin-top: -4%;
   }
   .all-besties {
     flex-direction: row;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import devices from "../images/readme-images/demo-devices.png";
 import verification from "../images/readme-images/demo-verification.png";
@@ -10,6 +10,9 @@ import verification2 from "../images/readme-images/demo-verification2.png";
 import deletepage from "../images/readme-images/demo-delete.png";
 
 function Tour() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <section>
       <p className="app-tour">
