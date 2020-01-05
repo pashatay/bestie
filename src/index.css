@@ -203,6 +203,12 @@ footer {
   align-items: center;
   cursor: pointer;
 }
+.app-name {
+  color: #6a6e92;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+}
 .app-info {
   width: 90%;
   margin: auto;
@@ -217,9 +223,7 @@ img {
   width: 200px;
   margin: auto;
 }
-.cake2 {
-  display: none;
-}
+
 .arrow {
   display: block;
   margin: auto;
@@ -229,9 +233,10 @@ img {
 .builtby {
   font-size: 1em;
   float: right;
-  margin: 1%;
-  margin-top: 5%;
-  margin-right: 3%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 3%;
 }
 
 .app-tour {
@@ -296,9 +301,11 @@ img {
 /* small phones */
 @media only screen and (max-height: 640px) {
   img {
-    width: 170px;
+    width: 130px;
   }
-
+  .app-info {
+    font-size: 1em;
+  }
   .add-friend-demo-button {
     margin-top: 5%;
   }
@@ -389,16 +396,7 @@ img {
     font-size: 1.7em;
   }
 
-  .cake,
-  .socialmedia,
-  .friends {
-    display: none;
-  }
-  .cake2 {
-    display: block;
-  }
-  .hug,
-  .cake2 {
+  .hug {
     width: 300px;
   }
 
@@ -523,5 +521,8 @@ img {
     right: 0px;
     margin-bottom: 0px;
     font-size: 1.2em;
+  }
+  .builtby {
+    position: relative;
   }
 }

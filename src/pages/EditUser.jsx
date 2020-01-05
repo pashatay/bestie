@@ -1,8 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../Context";
 
-import pencil from "../images/pencil.png";
-
 function EditUser() {
   const {
     anError,
@@ -55,7 +53,6 @@ function EditUser() {
           ></input>
         </form>
       </section>
-      <img src={pencil} className="edit-img" />
     </>
   );
 }
