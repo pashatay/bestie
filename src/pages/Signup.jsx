@@ -45,7 +45,7 @@ function Signup() {
         <input
           required
           type="password"
-          placeholder="password"
+          placeholder="confirm password"
           onChange={e => setConfirmedPassword(e.target.value)}
         />
         <br />
