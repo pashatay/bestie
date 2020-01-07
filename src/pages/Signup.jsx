@@ -28,7 +28,7 @@ function Signup() {
 
   const message = (
     <>
-      <h4 className="message">{aMessage}</h4>{" "}
+      <h4 className="message signup-message">{aMessage}</h4>{" "}
       <img src={cake} className="signup-img-cake" />
     </>
   );

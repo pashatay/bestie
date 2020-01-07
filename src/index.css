@@ -535,7 +535,7 @@ img {
     margin: auto;
   }
   .signup-img-cake {
-    margin-top: -3%;
+    margin: 3%;
     width: 550px;
   }
   .login-img {
@@ -573,15 +573,17 @@ img {
     bottom: 0;
     left: 0;
     top: 98%;
-    font-size: 1.2em;
+    font-size: 2em;
   }
   .message {
+    font-size: 2em;
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    top: 98%;
-    font-size: 2em;
-    margin-top: 10%;
+    top: 70%;
+  }
+  .signup-message {
+    top: 50%;
   }
 }
