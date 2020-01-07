@@ -28,3 +28,8 @@ If you ever want to delete your account, click the **"delete account"** button f
 Before deleting your account, **Bestie** will verify this is the correct course of action you want to take. If you press _"Yes"_ your data will be erased permanently.
 
 Excited to start using the app? Check out the [live page](https://bestie.now.sh/).
+
+You can use the foolowing demo user credentials:
+
+- email: user@gmail.com
+- password: user
