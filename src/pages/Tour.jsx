@@ -60,9 +60,9 @@ function Tour() {
       <br />
       <br />
       <div>
-        Excited to start using the app? Click the <bt />
+        Excited to start using the app? <bt />
         <Link to="/signup" className="signup-tourpage">
-          signup.
+          Signup here.
         </Link>
       </div>
     </section>
