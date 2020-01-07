@@ -14,13 +14,16 @@ function Signup() {
     handleSubmitSignUp,
     setConfirmedPassword,
     wasAbleToSignUp,
-    setWasAbleToSignUp
+    setWasAbleToSignUp,
+    disableInput,
+    setDisableInput
   } = useContext(Context);
 
   useEffect(() => {
     setAnError("");
     setAMessage("");
     setWasAbleToSignUp(false);
+    setDisableInput(false);
   }, []);
 
   const message = (
@@ -60,7 +63,12 @@ function Signup() {
           onChange={e => setConfirmedPassword(e.target.value)}
         />
         <br />
-        <input type="submit" className="button" value="Sign Up"></input>
+        <input
+          type="submit"
+          disabled={disableInput}
+          className="button"
+          value="Sign Up"
+        ></input>
       </form>
       <h4 className="error">{anError}</h4>
       <img src={signupImg} className="signup-img" />

@@ -20,6 +20,7 @@ function ContextProvider(props) {
   const [userData, setUserData] = useState([]);
   const [redirectTask, setRedirectTask] = useState(false);
   const [wasAbleToSignUp, setWasAbleToSignUp] = useState(false);
+  const [disableInput, setDisableInput] = useState(false);
 
   const headers = {
     Authorization: localStorage.getItem("access_token")
@@ -35,6 +36,7 @@ function ContextProvider(props) {
 
   const handleSubmitSignUp = e => {
     e.preventDefault();
+    setDisableInput(true);
     if (formValues.password === confirmedPassword) {
       axios
         .post(`${config.API_ENDPOINT}/signup`, formValues)
@@ -46,10 +48,12 @@ function ContextProvider(props) {
           setAnError("");
         })
         .catch(err => {
+          setDisableInput(false);
           setAnError(err.response.data.error.message);
           setAMessage("");
         });
     } else {
+      setDisableInput(false);
       setAnError("Passwords don't match!");
       setAMessage("");
     }
@@ -156,7 +160,9 @@ function ContextProvider(props) {
         aMessage,
         setAMessage,
         wasAbleToSignUp,
-        setWasAbleToSignUp
+        setWasAbleToSignUp,
+        disableInput,
+        setDisableInput
       }}
     >
       {props.children}

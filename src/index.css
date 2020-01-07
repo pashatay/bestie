@@ -413,6 +413,9 @@ img {
 
 /* tablets & laptops */
 @media only screen and (min-width: 1024px) {
+  body {
+    position: relative;
+  }
   .header-logLinks {
     width: 120px;
     justify-content: center;
@@ -559,17 +562,25 @@ img {
     margin-right: 5%;
   }
   .builtby {
+    position: absolute;
     font-size: 1.3em;
+    bottom: 0;
+    top: 98%;
   }
   .error {
-    position: fixed;
-    bottom: 5%;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 98%;
     font-size: 1.2em;
   }
   .message {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 98%;
     font-size: 2em;
     margin-top: 10%;
   }
